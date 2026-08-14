@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nana Banana | Farm Fresh Organic Bananas — Vidaboa Farm</title>
+<meta name="description" content="Discover Nana Banana from Vidaboa Farm: 100% organic, tree-ripened bananas grown with natural compost on the Highveld. Available in household crates and wholesale market boxes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --soil:#1a120b;
+  --earth:#3d2817;
+  --banana-yellow:#f5c518;
+  --banana-gold:#e5ad06;
+  --banana-cream:#fff8e7;
+  --straw:#f4dfa1;
+  --cream:#fbf8f2;
+  --offwhite:#f4eee2;
+  --leaf:#2c5430;
+  --fern:#3d7242;
+  --sage:#6f9f74;
+  --rust:#b53f1e;
+  --ember:#d95b28;
+  --wa:#25d366;
+  --radius-sm:8px;
+  --radius-md:14px;
+  --radius-lg:22px;
+  --shadow-sm:0 2px 8px rgba(26,18,11,0.06);
+  --shadow-md:0 10px 30px rgba(26,18,11,0.08);
+  --shadow-lg:0 20px 40px rgba(26,18,11,0.14);
+}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Outfit',sans-serif;
+  background:var(--cream);
+  color:var(--soil);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+
+/* Top bar */
+.topbar{
+  background:linear-gradient(90deg, #b07d03 0%, #e5ad06 50%, #b07d03 100%);
+  padding:9px 5vw;
+  text-align:center;
+  font-size:13px;
+  color:#1a120b;
+  font-weight:600;
+}
+.topbar a{
+  color:#1a120b;
+  font-weight:800;
+  text-decoration:underline;
+  margin-left:8px;
+}
+
+/* Single Navigation */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(26,18,11,0.96);
+  backdrop-filter:blur(16px);
+  padding:0 5vw;
+  height:110px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(244,223,161,0.15);
+}
+.nav-brand{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  text-decoration:none;
+}
+.nav-logo-img{
+  width:105px;
+  height:105px;
+  border-radius:0;
+  object-fit:contain;
+  padding:0;
+  margin:0;
+  border:none;
+  box-shadow:none;
+  background:transparent;
+  transition:transform .3s ease;
+  display:block;
+}
+.nav-brand:hover .nav-logo-img{transform:scale(1.06);}
+.nav-logo-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px;
+  font-weight:700;
+  color:var(--straw);
+  letter-spacing:1px;
+}
+.nav-logo-title em{color:var(--banana-yellow);font-style:normal;}
+.nav-logo-sub{
+  font-size:10.5px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:rgba(244,223,161,0.7);
+  margin-top:3px;
+}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center;}
+.nav-links a{
+  color:rgba(251,248,242,0.8);
+  text-decoration:none;
+  font-size:13.5px;
+  font-weight:500;
+  transition:color .2s;
+}
+.nav-links a:hover, .nav-links a.active{color:var(--banana-yellow);}
+.nav-order-btn{
+  background:linear-gradient(135deg, var(--banana-gold) 0%, #b8860b 100%)!important;
+  color:#1a120b!important;
+  padding:11px 24px!important;
+  border-radius:30px!important;
+  font-weight:800!important;
+  font-size:13px!important;
+  box-shadow:0 4px 14px rgba(229,173,6,0.4);
+}
+
+/* Nana Hero */
+.nana-hero{
+  min-height:85vh;
+  position:relative;
+  background:var(--soil);
+  display:flex;
+  align-items:center;
+  padding:70px 0 90px;
+  overflow:hidden;
+}
+.nana-hero-bg{
+  position:absolute;
+  inset:0;
+  background-image:url('banana_tree.jpg');
+  background-size:cover;
+  background-position:center;
+  opacity:0.65;
+  filter:saturate(1.2);
+}
+.nana-hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(26,18,11,0.6) 0%, rgba(26,18,11,0.3) 50%, rgba(26,18,11,0.92) 100%),
+             linear-gradient(90deg, rgba(26,18,11,0.85) 0%, rgba(26,18,11,0.5) 60%, rgba(26,18,11,0.2) 100%);
+}
+.nana-hero-inner{
+  position:relative;
+  z-index:2;
+  max-width:1240px;
+  margin:0 auto;
+  padding:0 5vw;
+  display:grid;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:60px;
+  align-items:center;
+}
+.nana-badge-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(26,18,11,0.7);
+  border:1px solid var(--banana-gold);
+  color:var(--banana-yellow);
+  padding:6px 16px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+.nana-hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(46px, 6vw, 74px);
+  font-weight:700;
+  color:#fff;
+  line-height:1.05;
+  margin-bottom:20px;
+  text-shadow:0 3px 14px rgba(0,0,0,0.7);
+}
+.nana-hero h1 em{
+  font-style:italic;
+  color:var(--banana-yellow);
+  display:block;
+}
+.nana-hero p{
+  font-size:17px;
+  color:rgba(251,248,242,0.92);
+  line-height:1.75;
+  margin-bottom:34px;
+  text-shadow:0 2px 8px rgba(0,0,0,0.8);
+}
+.nana-card-highlight{
+  background:rgba(26,18,11,0.9);
+  border:2px solid var(--banana-gold);
+  border-radius:var(--radius-lg);
+  padding:14px;
+  box-shadow:var(--shadow-lg);
+}
+.nana-img-framed{
+  width:100%;
+  height:280px;
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  margin-bottom:16px;
+  border:1px solid rgba(245,197,24,0.3);
+}
+.nana-img-framed img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.nana-card-highlight h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px;
+  color:var(--banana-yellow);
+  margin-bottom:6px;
+}
+.nana-card-highlight p{
+  font-size:13.5px;
+  color:rgba(251,248,242,0.8);
+  margin-bottom:16px;
+  line-height:1.6;
+}
+
+/* Feature grid */
+.features-section{
+  padding:90px 0;
+  background:var(--offwhite);
+}
+.container{
+  max-width:1240px;
+  margin:0 auto;
+  padding:0 5vw;
+}
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+.section-title h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:42px;
+  color:var(--soil);
+  margin-bottom:12px;
+}
+.section-title p{
+  font-size:16px;
+  color:var(--earth);
+  max-width:600px;
+  margin:0 auto;
+}
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:26px;
+}
+.feature-card{
+  background:#fff;
+  border:1px solid rgba(26,18,11,0.08);
+  border-radius:var(--radius-lg);
+  padding:12px;
+  box-shadow:var(--shadow-sm);
+  display:flex;
+  flex-direction:column;
+  transition:all .3s ease;
+}
+.feature-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-lg);
+  border-color:var(--banana-gold);
+}
+.feature-img-wrap{
+  width:100%;
+  height:200px;
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  margin-bottom:18px;
+}
+.feature-img-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.feature-card-body{
+  padding:6px 12px 16px 12px;
+}
+.feature-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;
+  color:var(--soil);
+  margin-bottom:8px;
+}
+.feature-card p{
+  font-size:14px;
+  color:var(--earth);
+  line-height:1.7;
+}
+
+/* Pricing Boxes */
+.nana-pricing{
+  background:var(--soil);
+  color:#fff;
+  padding:90px 0;
+}
+.pricing-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:26px;
+  margin-top:40px;
+}
+.pricing-card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(245,197,24,0.25);
+  border-radius:var(--radius-lg);
+  padding:32px 26px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:all .3s;
+}
+.pricing-card:hover, .pricing-card.featured{
+  border-color:var(--banana-yellow);
+  background:rgba(245,197,24,0.08);
+  transform:translateY(-6px);
+}
+.pricing-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px;
+  color:var(--banana-yellow);
+  margin-bottom:6px;
+}
+.pricing-val{
+  font-family:'Cormorant Garamond',serif;
+  font-size:38px;
+  color:#fff;
+  font-weight:700;
+  margin:16px 0;
+}
+.pricing-val span{font-size:16px;color:rgba(255,255,255,0.6);}
+.pricing-features{
+  list-style:none;
+  margin:20px 0 30px;
+  font-size:14px;
+  color:rgba(255,255,255,0.8);
+  line-height:2;
+}
+.btn-order-nana{
+  background:var(--banana-yellow);
+  color:var(--soil);
+  padding:14px 24px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:13px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:all .2s;
+}
+.btn-order-nana:hover{
+  background:#fff;
+  transform:translateY(-2px);
+}
+
+/* Footer */
+footer{
+  background:#110b06;
+  padding:64px 5vw 30px;
+  color:#fff;
+}
+.footer-top{
+  display:grid;
+  grid-template-columns:300px 1fr 1fr 1fr;
+  gap:44px;
+  margin-bottom:48px;
+}
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:12px;
+}
+.footer-logo-img{
+  width:95px;
+  height:95px;
+  border-radius:0;
+  object-fit:contain;
+  padding:0;
+  border:none;
+  box-shadow:none;
+  background:transparent;
+  display:block;
+}
+.footer-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--straw);}
+.footer-col h4{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--sage);margin-bottom:16px;font-weight:700;}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:10px;}
+.footer-col a{color:rgba(251,248,242,0.55);text-decoration:none;font-size:13.5px;}
+.footer-col a:hover{color:var(--banana-yellow);}
+.footer-bottom{display:flex;justify-content:space-between;font-size:12px;color:rgba(251,248,242,0.4);border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;}
+
+/* Floating WhatsApp Action Button */
+.floating-wa-btn{
+  position:fixed;
+  bottom:28px;
+  right:28px;
+  z-index:99999;
+  background:#25d366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  font-family:'Outfit',sans-serif;
+  font-size:14px;
+  font-weight:700;
+  box-shadow:0 8px 24px rgba(37,211,102,0.45), 0 4px 12px rgba(0,0,0,0.2);
+  transition:all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border:2px solid rgba(255,255,255,0.3);
+}
+.floating-wa-btn:hover{
+  transform:scale(1.08) translateY(-4px);
+  box-shadow:0 12px 30px rgba(37,211,102,0.6), 0 6px 16px rgba(0,0,0,0.3);
+  background:#20ba5a;
+  color:#fff;
+}
+.floating-wa-icon{
+  font-size:22px;
+  line-height:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+@media(max-width:1024px){
+  .nana-hero-inner{grid-template-columns:1fr;}
+  .features-grid{grid-template-columns:repeat(2, 1fr);}
+  .pricing-grid{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .nav-brand-text{display:none!important;}
+}
+@media(max-width:680px){
+  .nav-links{display:none;}
+  .nav-brand-text{display:none!important;}
+  .features-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .floating-wa-text{display:none;}
+  .floating-wa-btn{padding:16px;border-radius:50%;bottom:20px;right:20px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>🍌 Fresh Nana Banana Harvest Direct From Vidaboa Farm</span>
+  <a href="#pricing">Order Nana Crates →</a>
+</div>
+
+<nav class="nav" role="navigation">
+  <a href="index.html" class="nav-brand">
+    <img src="vidaboa_logo.svg" alt="Vidaboa Farm Logo" class="nav-logo-img" width="105" height="105">
+    <div class="nav-brand-text">
+      <div class="nav-logo-title">VIDA<em>BOA</em> FARM</div>
+      <div class="nav-logo-sub">Highveld Organic · Est. 2020</div>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Our Products</a></li>
+    <li><a href="gallery.html">Farm Gallery</a></li>
+    <li><a href="nana_banana.html" class="active">Nana Banana 🍌</a></li>
+    <li><a href="products.html#order" class="nav-order-btn">🛒 Order Now</a></li>
+  </ul>
+</nav>
+
+<section class="nana-hero">
+  <div class="nana-hero-bg"></div>
+  <div class="nana-hero-overlay"></div>
+
+  <div class="nana-hero-inner">
+    <div>
+      <div class="nana-badge-pill">🍌 Special Crop Harvest</div>
+      <h1>Sweet, Sun-Ripened<em>Nana Banana</em></h1>
+      <p>Nurtured with dark organic compost on our 29-hectare Bronkhorstspruit farm. 100% naturally tree-ripened, rich in potassium, and free of synthetic ripening gases. Pure tropical goodness for your family.</p>
+      
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="#pricing" class="btn-order-nana">🍌 View Nana Crates & Prices</a>
+        <a href="https://wa.me/27846494802?text=Hi%20Vidaboa%20Farm%2C%20I%20want%20to%20order%20Nana%20Bananas" target="_blank" class="btn-order-nana" style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.3);">💬 WhatsApp Order</a>
+      </div>
+    </div>
+
+    <div class="nana-card-highlight">
+      <div class="nana-img-framed">
+        <img src="nana_banana.jpg" alt="Fresh Nana Bananas Cluster">
+      </div>
+      <h3>Hand-Picked Freshness</h3>
+      <p>Harvested at peak natural sweetness. Perfect for healthy school snacks, baking, smoothies, and community market vendors.</p>
+      <div style="font-size:12px;color:var(--straw);font-weight:700;">📍 Fresh Batch Now Available in Gauteng & Mpumalanga</div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Grid -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Why Vidaboa's Nana Banana is Different</h2>
+      <p>Commercial store bananas are artificially gassed green. Our Nana Bananas ripen naturally on the tree under warm Highveld sunshine.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-img-wrap">
+          <img src="banana_tree.jpg" alt="Banana Grove and Canopy">
+        </div>
+        <div class="feature-card-body">
+          <h3>Organic Orchard Grove</h3>
+          <p>Grown in nutrient-dense soil continually fed with natural animal compost from our poultry and goat herds.</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-img-wrap">
+          <img src="farm_dam_water.jpg" alt="Pure Borehole Water Irrigation">
+        </div>
+        <div class="feature-card-body">
+          <h3>Clean Borehole Hydration</h3>
+          <p>Irrigated with pure subterranean borehole water, ensuring sweet, plump fruit free from municipal chemical additives.</p>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-img-wrap">
+          <img src="farm_to_table.jpg" alt="Wholesome Healthy Family Snack">
+        </div>
+        <div class="feature-card-body">
+          <h3>Natural Sugar & Potassium</h3>
+          <p>Delivers clean, slow-burning natural energy, high potassium, and dietary fiber that makes a real difference in your diet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing & Box Options -->
+<section class="nana-pricing" id="pricing">
+  <div class="container">
+    <div class="section-title">
+      <h2 style="color:#fff;">Nana Banana Box Options</h2>
+      <p style="color:rgba(255,255,255,0.8);">Available in household snack bundles, bulk family crates, and wholesale vendor boxes.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- 1. Household Bundle -->
+      <div class="pricing-card">
+        <div>
+          <h3>Family Bunch</h3>
+          <div class="pricing-val">R35 <span>/ cluster</span></div>
+          <ul class="pricing-features">
+            <li>• 1.5kg – 2kg fresh bunch</li>
+            <li>• Naturally tree-ripened</li>
+            <li>• Ready to enjoy immediately</li>
+            <li>• Delivered with your weekly veggies</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/27846494802?text=I%20want%20to%20order%20the%20Nana%20Banana%20Family%20Bunch" target="_blank" class="btn-order-nana">Order Family Bunch →</a>
+      </div>
+
+      <!-- 2. Bulk Crate (Featured) -->
+      <div class="pricing-card featured">
+        <div>
+          <span style="background:var(--banana-yellow);color:#1a120b;font-size:10px;font-weight:800;padding:4px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:1px;">Best Family Value</span>
+          <h3 style="margin-top:10px;">Bulk Harvest Crate</h3>
+          <div class="pricing-val">R110 <span>/ 7kg crate</span></div>
+          <ul class="pricing-features">
+            <li>• 7kg mixed ripening stages</li>
+            <li>• Ideal for smoothies, snacking & freezing</li>
+            <li>• Lasts 2 full weeks</li>
+            <li>• Free local collection / scheduled delivery</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/27846494802?text=I%20want%20to%20order%20the%20Nana%20Banana%207kg%20Crate" target="_blank" class="btn-order-nana" style="background:var(--banana-yellow);">Order 7kg Crate →</a>
+      </div>
+
+      <!-- 3. Wholesale Box -->
+      <div class="pricing-card">
+        <div>
+          <h3>Market Wholesale Box</h3>
+          <div class="pricing-val">R220 <span>/ 18kg box</span></div>
+          <ul class="pricing-features">
+            <li>• 18kg bulk commercial pack</li>
+            <li>• For spaza shops & street vendors</li>
+            <li>• High-profit resale margins</li>
+            <li>• Scheduled weekly supply runs</li>
+          </ul>
+        </div>
+        <a href="https://wa.me/27846494802?text=I%20am%20interested%20in%20Nana%20Banana%20Wholesale%20Boxes" target="_blank" class="btn-order-nana">Inquire Wholesale →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">
+        <img src="vidaboa_logo.svg" alt="Vidaboa Farm Logo" class="footer-logo-img" width="95" height="95">
+        <div class="footer-title">VIDABOA FARM</div>
+      </div>
+      <p style="font-size:13.5px;color:rgba(251,248,242,0.5);line-height:1.7;">A 29-hectare organic family farm in Bronkhorstspruit, Gauteng, committed to providing wholesome, chemical-free food since 2020.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="gallery.html">Farm Gallery</a></li>
+        <li><a href="nana_banana.html">Nana Banana</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Delivery Cities</h4>
+      <ul>
+        <li><a href="products.html#order">Pretoria</a></li>
+        <li><a href="products.html#order">Johannesburg</a></li>
+        <li><a href="products.html#order">Bronkhorstspruit</a></li>
+        <li><a href="products.html#order">Witbank</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Direct Contact</h4>
+      <ul>
+        <li><a href="https://wa.me/27846494802" target="_blank">WhatsApp: +27 84 649 4802</a></li>
+        <li><a href="mailto:vidaboafarm@gmail.com">vidaboafarm@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Vidaboa Farm. All rights reserved. Bronkhorstspruit, Gauteng.</span>
+    <span>Sweet Nana Banana · 100% Tree Ripened</span>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp Action Button -->
+<a href="https://wa.me/27846494802?text=Hi%20Vidaboa%20Farm%2C%20I%20would%20like%20to%20order%20Nana%20Bananas" target="_blank" rel="noopener" class="floating-wa-btn" aria-label="Chat on WhatsApp">
+  <span class="floating-wa-icon">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </span>
+  <span class="floating-wa-text">Chat on WhatsApp</span>
+</a>
+
+</body>
+</html>

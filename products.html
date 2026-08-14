@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Organic Products | Vidaboa Farm — Free-Range Chickens, Veggies & Goats</title>
+<meta name="description" content="Browse fresh organic produce from Vidaboa Farm: Free-Range Broilers, Runner Hens, Farm Eggs, Swiss Chard, Culinary Herbs, Nana Bananas and Pasture Goats. Delivering across Gauteng & Mpumalanga.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --soil:#1a120b;
+  --earth:#3d2817;
+  --clay:#85502c;
+  --sand:#d6b68e;
+  --straw:#f4dfa1;
+  --cream:#fbf8f2;
+  --offwhite:#f4eee2;
+  --leaf:#2c5430;
+  --fern:#3d7242;
+  --sage:#6f9f74;
+  --rust:#b53f1e;
+  --ember:#d95b28;
+  --wa:#25d366;
+  --radius-sm:8px;
+  --radius-md:14px;
+  --radius-lg:22px;
+  --shadow-sm:0 2px 8px rgba(26,18,11,0.06);
+  --shadow-md:0 10px 30px rgba(26,18,11,0.08);
+  --shadow-lg:0 20px 40px rgba(26,18,11,0.14);
+}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Outfit',sans-serif;
+  background:var(--cream);
+  color:var(--soil);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+
+.topbar{
+  background:linear-gradient(90deg, #203f23 0%, #2c5430 50%, #203f23 100%);
+  padding:9px 5vw;
+  text-align:center;
+  font-size:13px;
+  color:rgba(255,255,255,0.92);
+}
+.topbar a{color:var(--straw);font-weight:700;text-decoration:none;}
+
+/* Single Navigation */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(26,18,11,0.96);
+  backdrop-filter:blur(16px);
+  padding:0 5vw;
+  height:110px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(244,223,161,0.15);
+}
+.nav-brand{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  text-decoration:none;
+}
+.nav-logo-img{
+  width:105px;
+  height:105px;
+  border-radius:0;
+  object-fit:contain;
+  padding:0;
+  margin:0;
+  border:none;
+  box-shadow:none;
+  background:transparent;
+  transition:transform .3s ease;
+  display:block;
+}
+.nav-brand:hover .nav-logo-img{transform:scale(1.06);}
+.nav-brand-text{display:flex;flex-direction:column;}
+.nav-logo-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px;
+  font-weight:700;
+  color:var(--straw);
+  letter-spacing:1px;
+}
+.nav-logo-title em{color:var(--sage);font-style:normal;}
+.nav-logo-sub{
+  font-size:10.5px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:rgba(244,223,161,0.7);
+  margin-top:3px;
+}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center;}
+.nav-links a{
+  color:rgba(251,248,242,0.8);
+  text-decoration:none;
+  font-size:13.5px;
+  font-weight:500;
+  letter-spacing:0.5px;
+  transition:color .2s;
+  padding:4px 0;
+}
+.nav-links a:hover, .nav-links a.active{color:var(--straw);}
+.nav-order-btn{
+  background:linear-gradient(135deg, var(--rust) 0%, var(--ember) 100%)!important;
+  color:#fff!important;
+  padding:11px 24px!important;
+  border-radius:30px!important;
+  font-weight:700!important;
+  font-size:13px!important;
+  box-shadow:0 4px 14px rgba(181,63,30,0.4);
+}
+
+/* Page Header */
+.page-header{
+  background:var(--soil);
+  position:relative;
+  padding:90px 5vw 70px;
+  text-align:center;
+  overflow:hidden;
+}
+.page-header-bg{
+  position:absolute;
+  inset:0;
+  background-image:url('seasonal_veg.jpg');
+  background-size:cover;
+  background-position:center;
+  opacity:0.4;
+}
+.page-header-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(26,18,11,0.7) 0%, rgba(26,18,11,0.92) 100%);
+}
+.page-header-inner{
+  position:relative;
+  z-index:2;
+  max-width:800px;
+  margin:0 auto;
+}
+.page-header h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(40px, 5vw, 64px);
+  color:#fff;
+  font-weight:700;
+  line-height:1.05;
+  margin-bottom:16px;
+}
+.page-header p{
+  font-size:16.5px;
+  color:rgba(251,248,242,0.85);
+  line-height:1.7;
+}
+
+/* Main Catalog */
+.catalog-section{
+  padding:80px 0 100px;
+}
+.container{
+  max-width:1240px;
+  margin:0 auto;
+  padding:0 5vw;
+}
+.catalog-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:26px;
+}
+.catalog-card{
+  background:#fff;
+  border:1px solid rgba(26,18,11,0.08);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  transition:all .3s ease;
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+}
+.catalog-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-lg);
+  border-color:var(--sage);
+}
+.catalog-card.featured{
+  border:2px solid var(--leaf);
+}
+.catalog-img-wrap{
+  position:relative;
+  width:100%;
+  height:220px;
+  overflow:hidden;
+  border-radius:var(--radius-md);
+  background:var(--soil);
+}
+.catalog-img-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:var(--radius-md);
+  transition:transform .4s ease;
+  display:block;
+}
+.catalog-card:hover .catalog-img-wrap img{
+  transform:scale(1.06);
+}
+.catalog-body{
+  padding:20px 12px 16px 12px;
+  display:flex;
+  flex-direction:column;
+  flex-grow:1;
+}
+.catalog-body h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px;
+  color:var(--soil);
+  margin-bottom:8px;
+  font-weight:700;
+}
+.catalog-body p{
+  font-size:14px;
+  color:var(--earth);
+  line-height:1.7;
+  margin-bottom:16px;
+  flex-grow:1;
+}
+.catalog-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:18px;
+}
+.meta-tag{
+  background:var(--cream);
+  color:var(--clay);
+  font-size:10.5px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  padding:4px 10px;
+  border-radius:20px;
+  border:1px solid var(--sand);
+}
+.catalog-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-top:14px;
+  border-top:1px solid var(--offwhite);
+}
+.catalog-price{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;
+  color:var(--soil);
+  font-weight:700;
+}
+.btn-select{
+  background:var(--leaf);
+  color:#fff;
+  padding:8px 18px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:700;
+  text-decoration:none;
+  text-transform:uppercase;
+  letter-spacing:0.8px;
+  transition:background .2s;
+}
+.btn-select:hover{background:var(--fern);}
+
+/* Order Box */
+.order-wrapper{
+  margin-top:80px;
+  background:var(--soil);
+  border-radius:var(--radius-lg);
+  padding:50px 40px;
+  color:#fff;
+  border:1px solid rgba(244,223,161,0.2);
+}
+.order-wrapper h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:38px;
+  color:var(--straw);
+  margin-bottom:12px;
+  text-align:center;
+}
+.order-wrapper p.subtitle{
+  text-align:center;
+  font-size:15px;
+  color:rgba(251,248,242,0.7);
+  max-width:600px;
+  margin:0 auto 36px;
+}
+.order-box-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+.fg{margin-bottom:14px;}
+.fg label{
+  display:block;
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:rgba(251,248,242,0.6);
+  margin-bottom:6px;
+}
+.fg input, .fg select, .fg textarea{
+  width:100%;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:8px;
+  padding:12px 16px;
+  color:#fff;
+  font-family:'Outfit',sans-serif;
+  font-size:14px;
+}
+.fg select option{background:var(--soil);color:#fff;}
+.calc-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.calc-ctrl{display:flex;align-items:center;gap:8px;}
+.calc-btn{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.25);
+  color:var(--straw);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+}
+.calc-num{min-width:24px;text-align:center;font-weight:700;color:var(--straw);}
+.order-btn-submit{
+  width:100%;
+  background:linear-gradient(135deg, #25d366 0%, #1eab52 100%);
+  color:#fff;
+  border:none;
+  padding:16px;
+  border-radius:30px;
+  font-weight:800;
+  font-size:14px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  cursor:pointer;
+  margin-top:20px;
+  box-shadow:0 6px 20px rgba(37,211,102,0.4);
+}
+
+/* Footer */
+footer{
+  background:#110b06;
+  padding:64px 5vw 30px;
+  color:#fff;
+  border-top:1px solid rgba(244,223,161,0.1);
+}
+.footer-top{
+  display:grid;
+  grid-template-columns:300px 1fr 1fr 1fr;
+  gap:44px;
+  margin-bottom:48px;
+}
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:12px;
+}
+.footer-logo-img{
+  width:95px;
+  height:95px;
+  border-radius:0;
+  object-fit:contain;
+  padding:0;
+  border:none;
+  box-shadow:none;
+  background:transparent;
+  display:block;
+}
+.footer-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--straw);}
+.footer-col h4{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--sage);margin-bottom:16px;font-weight:700;}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:10px;}
+.footer-col a{color:rgba(251,248,242,0.55);text-decoration:none;font-size:13.5px;}
+.footer-col a:hover{color:var(--straw);}
+.footer-bottom{display:flex;justify-content:space-between;font-size:12px;color:rgba(251,248,242,0.4);border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;}
+
+/* Floating WhatsApp Action Button */
+.floating-wa-btn{
+  position:fixed;
+  bottom:28px;
+  right:28px;
+  z-index:99999;
+  background:#25d366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  font-family:'Outfit',sans-serif;
+  font-size:14px;
+  font-weight:700;
+  box-shadow:0 8px 24px rgba(37,211,102,0.45), 0 4px 12px rgba(0,0,0,0.2);
+  transition:all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border:2px solid rgba(255,255,255,0.3);
+}
+.floating-wa-btn:hover{
+  transform:scale(1.08) translateY(-4px);
+  box-shadow:0 12px 30px rgba(37,211,102,0.6), 0 6px 16px rgba(0,0,0,0.3);
+  background:#20ba5a;
+  color:#fff;
+}
+.floating-wa-icon{
+  font-size:22px;
+  line-height:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+@media(max-width:1024px){
+  .catalog-grid{grid-template-columns:repeat(2, 1fr);}
+  .order-box-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .nav-brand-text{display:none!important;}
+}
+@media(max-width:680px){
+  .nav-links{display:none;}
+  .nav-brand-text{display:none!important;}
+  .catalog-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .floating-wa-text{display:none;}
+  .floating-wa-btn{padding:16px;border-radius:50%;bottom:20px;right:20px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>🌿 100% Organic, chemical-free produce delivered to Pretoria, Joburg, Bronkhorstspruit & Witbank</span>
+</div>
+
+<nav class="nav" role="navigation">
+  <a href="index.html" class="nav-brand">
+    <img src="vidaboa_logo.svg" alt="Vidaboa Farm Logo" class="nav-logo-img" width="105" height="105">
+    <div class="nav-brand-text">
+      <div class="nav-logo-title">VIDA<em>BOA</em> FARM</div>
+      <div class="nav-logo-sub">Highveld Organic · Est. 2020</div>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html" class="active">Our Products</a></li>
+    <li><a href="gallery.html">Farm Gallery</a></li>
+    <li><a href="nana_banana.html">Nana Banana 🍌</a></li>
+    <li><a href="#order" class="nav-order-btn">🛒 Place Order</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-overlay"></div>
+  <div class="page-header-inner">
+    <p style="font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--straw);font-weight:700;margin-bottom:12px;">Direct Farm Catalog</p>
+    <h1>Our Harvest & Produce</h1>
+    <p>Every product is produced on our 29-hectare organic property in Bronkhorstspruit. Ethical free-range poultry, fresh compost-grown greens, sweet Nana bananas, and healthy goats.</p>
+  </div>
+</header>
+
+<main class="catalog-section">
+  <div class="container">
+    
+    <div class="catalog-grid">
+      <!-- 1. Broiler Chickens -->
+      <div class="catalog-card featured">
+        <div class="catalog-img-wrap">
+          <img src="broiler_chickens.jpg" alt="Free-Range Broiler Chickens">
+        </div>
+        <div class="catalog-body">
+          <h3>Free-Range Broilers</h3>
+          <p>Raised in batches on pasture grass with sunshine and clean water. Sold live weight or dressed to order.</p>
+          <div class="catalog-meta">
+            <span class="meta-tag">Live Weight</span>
+            <span class="meta-tag">Dressed</span>
+            <span class="meta-tag">Bulk Batches</span>
+          </div>
+          <div class="catalog-footer">
+            <div class="catalog-price">R40 – R120 <span style="font-size:12px;font-weight:400;color:var(--mid);">/ bird</span></div>
+            <a href="#order" class="btn-select" onclick="setProductQty('p_broiler')">Order +</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Nana Banana -->
+      <div class="catalog-card featured">
+        <div class="catalog-img-wrap">
+          <img src="nana_banana.jpg" alt="Sweet Tree-Ripened Nana Bananas">
+        </div>
+        <div class="catalog-body">
+          <h3>Nana Banana Harvest</h3>
+          <p>Tree-ripened organic bananas grown in living compost soil. Super sweet, zero artificial ripening gases.</p>
+          <div class="catalog-meta">
+            <span class="meta-tag">Tree Ripened</span>
+            <span class="meta-tag">Potassium Rich</span>
+            <span class="meta-tag">Crates</span>
+          </div>
+          <div class="catalog-footer">
+            <div class="catalog-price">R35 – R110 <span style="font-size:12px;font-weight:400;color:var(--mid);">/ crate</span></div>
+            <a href="nana_banana.html" class="btn-select" style="background:#e5ad06;color:#1a120b;">Explore 🍌</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Swiss Chard -->
+      <div class="catalog-card">
+        <div class="catalog-img-wrap">
+          <img src="swiss_chard.jpg" alt="Organic Swiss Chard Bunches">
+        </div>
+        <div class="catalog-body">
+          <h3>Fresh Swiss Chard</h3>
+          <p>Thick, dark-green organic leaves harvested same-day from companion beds. Zero synthetic chemicals.</p>
+          <div class="catalog-meta">
+            <span class="meta-tag">Weekly Bunches</span>
+            <span class="meta-tag">Pesticide Free</span>
+          </div>
+          <div class="catalog-footer">
+            <div class="catalog-price">R15 – R25 <span style="font-size:12px;font-weight:400;color:var(--mid);">/ bunch</span></div>
+            <a href="#order" class="btn-select" onclick="setProductQty('p_chard')">Order +</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Fresh Herbs -->
+      <div class="catalog-card">
+        <div class="catalog-img-wrap">
+          <img src="fresh_herbs.jpg" alt="Fresh Culinary Herbs Bundles">
+        </div>
+        <div class="catalog-body">
+          <h3>Culinary Herb Bunches</h3>
+          <p>Fragrant sweet basil, Italian flat parsley, rosemary, and seasonal herbs bundled fresh for culinary excellence.</p>
+          <div class="catalog-meta">
+            <span class="meta-tag">Fresh Cut</span>
+            <span class="meta-tag">Basil & Parsley</span>
+          </div>
+          <div class="catalog-footer">
+            <div class="catalog-price">R10 – R25 <span style="font-size:12px;font-weight:400;color:var(--mid);">/ bunch</span></div>
+            <a href="#order" class="btn-select" onclick="setProductQty('p_herbs')">Order +</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Runner Chickens -->
+      <div class="catalog-card">
+        <div class="catalog-img-wrap">
+          <img src="runner_chickens.jpg" alt="Heritage Runner Meat Hens">
+        </div>
+        <div class="catalog-body">
+          <h3>Runner Meat Hens</h3>
+          <p>Heritage self-foraging birds sold as off-lay hens. Unmatched depth of traditional flavour for hearty stews.</p>
+          <div class="catalog-meta">
+            <span class="meta-tag">Heritage Breed</span>
+            <span class="meta-tag">Off-Lay Hen</span>
+          </div>
+          <div class="catalog-footer">
+            <div class="catalog-price">R60 – R150 <span style="font-size:12px;font-weight:400;color:var(--mid);">/ bird</span></div>
+            <a href="#order" class="btn-select" onclick="setProductQty('p_runner')">Order +</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Free Range Eggs -->
+      <div class="catalog-card">
+        <div class="catalog-img-wrap">
+          <img src="free_range_eggs.jpg" alt="Pasture Free-Range Eggs">
+        </div>
+        <div class="catalog-body">
+          <h3>Free-Range Farm Eggs</h3>
+          <p>Golden-yolk fresh eggs collected daily from our pasture hens. Rich in Omega-3 and natural vitamins.</p>
+          <div class="catalog-meta">
+            <span class="meta-tag">Daily Harvest</span>
+            <span class="meta-tag">Pasture Fed</span>
+          </div>
+          <div class="catalog-footer">
+            <div class="catalog-price">R35 – R95 <span style="font-size:12px;font-weight:400;color:var(--mid);">/ tray</span></div>
+            <a href="#order" class="btn-select" onclick="setProductQty('p_eggs')">Order +</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Seasonal Veggies -->
+      <div class="catalog-card">
+        <div class="catalog-img-wrap">
+          <img src="seasonal_veg.jpg" alt="Seasonal Vegetable Harvest Crate">
+        </div>
+        <div class="catalog-body">
+          <h3>Seasonal Veggie Crate</h3>
+          <p>Curated organic bundle of tomatoes, broccoli, bush beans, beetroot, and seasonal squash picked fresh.</p>
+          <div class="catalog-meta">
+            <span class="meta-tag">Weekly Crate</span>
+            <span class="meta-tag">Compost Grown</span>
+          </div>
+          <div class="catalog-footer">
+            <div class="catalog-price">R45 – R90 <span style="font-size:12px;font-weight:400;color:var(--mid);">/ crate</span></div>
+            <a href="#order" class="btn-select" onclick="setProductQty('p_veg')">Order +</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Goats -->
+      <div class="catalog-card">
+        <div class="catalog-img-wrap">
+          <img src="farm_goats.jpg" alt="Pasture-Raised Goats Herd">
+        </div>
+        <div class="catalog-body">
+          <h3>Live Goats Herd</h3>
+          <p>Pasture-grazed mixed herd. Weaners and slaughter weight goats available for traditional occasions.</p>
+          <div class="catalog-meta">
+            <span class="meta-tag">Weaners</span>
+            <span class="meta-tag">Slaughter Weight</span>
+          </div>
+          <div class="catalog-footer">
+            <div class="catalog-price">Price on request</div>
+            <a href="https://wa.me/27846494802?text=I%20am%20inquiring%20about%20Goat%20availability" target="_blank" class="btn-select">Enquire 💬</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. Living Organic Soil & Compost -->
+      <div class="catalog-card">
+        <div class="catalog-img-wrap">
+          <img src="farm_soil_sustainability.jpg" alt="Organic Farm Compost Soil">
+        </div>
+        <div class="catalog-body">
+          <h3>Organic Farm Compost</h3>
+          <p>High-nutrient cured manure compost for home gardens and local agriculture. Rich microbial life.</p>
+          <div class="catalog-meta">
+            <span class="meta-tag">30kg Bags</span>
+            <span class="meta-tag">Bulk Bakkie Loads</span>
+          </div>
+          <div class="catalog-footer">
+            <div class="catalog-price">R50 – R150 <span style="font-size:12px;font-weight:400;color:var(--mid);">/ bag</span></div>
+            <a href="#order" class="btn-select" onclick="setProductQty('p_compost')">Order +</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Embedded Fast Order Box -->
+    <div class="order-wrapper" id="order">
+      <h2>🛒 Place Your Direct Produce Order</h2>
+      <p class="subtitle">Select your quantities below. We confirm delivery routes to Pretoria, Johannesburg, Bronkhorstspruit, and Witbank within 24 hours.</p>
+
+      <div class="order-box-grid">
+        <div>
+          <div class="fg">
+            <label>Your Full Name</label>
+            <input type="text" id="cust_name" placeholder="e.g. Lerato Khumalo">
+          </div>
+          <div class="fg">
+            <label>WhatsApp Contact Number</label>
+            <input type="tel" id="cust_phone" placeholder="+27 82 ...">
+          </div>
+          <div class="fg">
+            <label>Delivery Area / City</label>
+            <select id="cust_area">
+              <option value="" disabled selected>Select destination</option>
+              <option value="Pretoria">Pretoria (East / North / Centurion)</option>
+              <option value="Johannesburg">Johannesburg (Sandton / Midrand / North)</option>
+              <option value="Bronkhorstspruit">Bronkhorstspruit (Local Delivery / Farm Collection)</option>
+              <option value="Witbank">Witbank (eMalahleni)</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Order Notes / Cuts</label>
+            <textarea id="cust_notes" placeholder="Live vs dressed chicken, delivery day preferences..."></textarea>
+          </div>
+        </div>
+
+        <div>
+          <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--straw);display:block;margin-bottom:12px;font-weight:700;">Quantities</span>
+          
+          <div class="calc-row">
+            <span>Free-Range Broilers</span>
+            <div class="calc-ctrl">
+              <button class="calc-btn" onclick="adjustP('p_broiler',-1)">-</button>
+              <span class="calc-num" id="p_broiler">0</span>
+              <button class="calc-btn" onclick="adjustP('p_broiler',1)">+</button>
+            </div>
+          </div>
+
+          <div class="calc-row">
+            <span>Nana Banana (Crates) 🍌</span>
+            <div class="calc-ctrl">
+              <button class="calc-btn" onclick="adjustP('p_nana',-1)">-</button>
+              <span class="calc-num" id="p_nana">0</span>
+              <button class="calc-btn" onclick="adjustP('p_nana',1)">+</button>
+            </div>
+          </div>
+
+          <div class="calc-row">
+            <span>Organic Swiss Chard Bunches</span>
+            <div class="calc-ctrl">
+              <button class="calc-btn" onclick="adjustP('p_chard',-1)">-</button>
+              <span class="calc-num" id="p_chard">0</span>
+              <button class="calc-btn" onclick="adjustP('p_chard',1)">+</button>
+            </div>
+          </div>
+
+          <div class="calc-row">
+            <span>Culinary Herb Bunches</span>
+            <div class="calc-ctrl">
+              <button class="calc-btn" onclick="adjustP('p_herbs',-1)">-</button>
+              <span class="calc-num" id="p_herbs">0</span>
+              <button class="calc-btn" onclick="adjustP('p_herbs',1)">+</button>
+            </div>
+          </div>
+
+          <div class="calc-row">
+            <span>Runner Meat Hens</span>
+            <div class="calc-ctrl">
+              <button class="calc-btn" onclick="adjustP('p_runner',-1)">-</button>
+              <span class="calc-num" id="p_runner">0</span>
+              <button class="calc-btn" onclick="adjustP('p_runner',1)">+</button>
+            </div>
+          </div>
+
+          <div class="calc-row">
+            <span>Farm Egg Trays</span>
+            <div class="calc-ctrl">
+              <button class="calc-btn" onclick="adjustP('p_eggs',-1)">-</button>
+              <span class="calc-num" id="p_eggs">0</span>
+              <button class="calc-btn" onclick="adjustP('p_eggs',1)">+</button>
+            </div>
+          </div>
+
+          <div class="calc-row">
+            <span>Seasonal Veggie Crates</span>
+            <div class="calc-ctrl">
+              <button class="calc-btn" onclick="adjustP('p_veg',-1)">-</button>
+              <span class="calc-num" id="p_veg">0</span>
+              <button class="calc-btn" onclick="adjustP('p_veg',1)">+</button>
+            </div>
+          </div>
+
+          <button class="order-btn-submit" onclick="submitCatalogOrder()">💬 Send Order via WhatsApp</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">
+        <img src="vidaboa_logo.svg" alt="Vidaboa Farm Logo" class="footer-logo-img" width="95" height="95">
+        <div class="footer-title">VIDABOA FARM</div>
+      </div>
+      <p style="font-size:13.5px;color:rgba(251,248,242,0.5);line-height:1.7;">A 29-hectare organic family farm in Bronkhorstspruit, Gauteng, committed to providing wholesome, chemical-free food since 2020.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="gallery.html">Farm Gallery</a></li>
+        <li><a href="nana_banana.html">Nana Banana</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Delivery Cities</h4>
+      <ul>
+        <li><a href="#order">Pretoria</a></li>
+        <li><a href="#order">Johannesburg</a></li>
+        <li><a href="#order">Bronkhorstspruit</a></li>
+        <li><a href="#order">Witbank</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Direct Contact</h4>
+      <ul>
+        <li><a href="https://wa.me/27846494802" target="_blank">WhatsApp: +27 84 649 4802</a></li>
+        <li><a href="mailto:vidaboafarm@gmail.com">vidaboafarm@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Vidaboa Farm. All rights reserved. Bronkhorstspruit, Gauteng.</span>
+    <span>Organic Produce & Pasture Harvest</span>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp Action Button -->
+<a href="https://wa.me/27846494802?text=Hi%20Vidaboa%20Farm%2C%20I%20would%20like%20to%20place%20an%20order" target="_blank" rel="noopener" class="floating-wa-btn" aria-label="Chat on WhatsApp">
+  <span class="floating-wa-icon">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </span>
+  <span class="floating-wa-text">Chat on WhatsApp</span>
+</a>
+
+<script>
+const pQuantities = {
+  p_broiler: 0,
+  p_nana: 0,
+  p_chard: 0,
+  p_herbs: 0,
+  p_runner: 0,
+  p_eggs: 0,
+  p_veg: 0
+};
+
+const pLabels = {
+  p_broiler: 'Free-Range Broilers',
+  p_nana: 'Nana Banana Crates 🍌',
+  p_chard: 'Swiss Chard Bunches',
+  p_herbs: 'Culinary Herb Bunches',
+  p_runner: 'Runner Meat Hens',
+  p_eggs: 'Farm Egg Trays',
+  p_veg: 'Seasonal Veggie Crates'
+};
+
+function adjustP(key, delta) {
+  pQuantities[key] = Math.max(0, pQuantities[key] + delta);
+  document.getElementById(key).textContent = pQuantities[key];
+}
+
+function setProductQty(key) {
+  adjustP(key, 1);
+  const orderElem = document.getElementById('order');
+  if (orderElem) orderElem.scrollIntoView({ behavior: 'smooth' });
+}
+
+function submitCatalogOrder() {
+  const name = document.getElementById('cust_name').value.trim();
+  const phone = document.getElementById('cust_phone').value.trim();
+  const area = document.getElementById('cust_area').value;
+  const notes = document.getElementById('cust_notes').value.trim();
+
+  if (!name || !phone || !area) {
+    alert('Please enter your name, WhatsApp number, and delivery city.');
+    return;
+  }
+
+  let totalItems = 0;
+  let itemsSummary = '';
+  for (const [k, v] of Object.entries(pQuantities)) {
+    if (v > 0) {
+      totalItems += v;
+      itemsSummary += `• ${pLabels[k]}: ${v}\n`;
+    }
+  }
+
+  if (totalItems === 0) {
+    alert('Please choose at least 1 product quantity.');
+    return;
+  }
+
+  const message = 
+    `🌿 *NEW PRODUCE ORDER - VIDABOA FARM*\n` +
+    `--------------------------------\n` +
+    `👤 *Customer Name:* ${name}\n` +
+    `📱 *WhatsApp Number:* ${phone}\n` +
+    `📍 *Delivery City / Region:* ${area}\n\n` +
+    `🛒 *ITEMS ORDERED (${totalItems} total):*\n${itemsSummary}\n` +
+    `📝 *Special Notes / Cuts:* ${notes || 'None'}\n` +
+    `--------------------------------\n` +
+    `Please confirm total and scheduled delivery date. Thank you!`;
+
+  const waUrl = `https://wa.me/27846494802?text=${encodeURIComponent(message)}`;
+  window.open(waUrl, '_blank');
+}
+</script>
+</body>
+</html>

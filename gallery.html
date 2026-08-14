@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farm Photo Gallery | Vidaboa Farm — Highveld Organic Life & Harvest</title>
+<meta name="description" content="Explore real photos of Vidaboa Farm in Bronkhorstspruit: free-range chickens, organic vegetable beds, goat herds, Nana bananas, and sustainable farming in action.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --soil:#1a120b;
+  --earth:#3d2817;
+  --clay:#85502c;
+  --sand:#d6b68e;
+  --straw:#f4dfa1;
+  --cream:#fbf8f2;
+  --offwhite:#f4eee2;
+  --leaf:#2c5430;
+  --fern:#3d7242;
+  --sage:#6f9f74;
+  --mint:#d5ebd8;
+  --rust:#b53f1e;
+  --ember:#d95b28;
+  --wa:#25d366;
+  --radius-sm:8px;
+  --radius-md:14px;
+  --radius-lg:22px;
+  --shadow-sm:0 2px 8px rgba(26,18,11,0.06);
+  --shadow-md:0 10px 30px rgba(26,18,11,0.08);
+  --shadow-lg:0 20px 40px rgba(26,18,11,0.14);
+}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Outfit',sans-serif;
+  background:var(--cream);
+  color:var(--soil);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+
+/* Top Announcement Bar */
+.topbar{
+  background:linear-gradient(90deg, #203f23 0%, #2c5430 50%, #203f23 100%);
+  padding:9px 5vw;
+  text-align:center;
+  font-size:13px;
+  color:rgba(255,255,255,0.92);
+  border-bottom:1px solid rgba(244,223,161,0.2);
+}
+.topbar a{
+  color:var(--straw);
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* Single Navigation Header */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(26,18,11,0.96);
+  backdrop-filter:blur(16px);
+  padding:0 5vw;
+  height:110px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(244,223,161,0.15);
+}
+.nav-brand{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  text-decoration:none;
+}
+.nav-logo-img{
+  width:105px;
+  height:105px;
+  border-radius:0;
+  object-fit:contain;
+  padding:0;
+  margin:0;
+  border:none;
+  box-shadow:none;
+  background:transparent;
+  transition:transform .3s ease;
+  display:block;
+}
+.nav-brand:hover .nav-logo-img{transform:scale(1.06);}
+.nav-brand-text{display:flex;flex-direction:column;}
+.nav-logo-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px;
+  font-weight:700;
+  color:var(--straw);
+  letter-spacing:1px;
+  line-height:1;
+}
+.nav-logo-title em{color:var(--sage);font-style:normal;}
+.nav-logo-sub{
+  font-size:10.5px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:rgba(244,223,161,0.7);
+  margin-top:3px;
+}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center;}
+.nav-links a{
+  color:rgba(251,248,242,0.8);
+  text-decoration:none;
+  font-size:13.5px;
+  font-weight:500;
+  letter-spacing:0.5px;
+  transition:color .2s;
+  padding:4px 0;
+}
+.nav-links a:hover, .nav-links a.active{color:var(--straw);}
+.nav-order-btn{
+  background:linear-gradient(135deg, var(--rust) 0%, var(--ember) 100%)!important;
+  color:#fff!important;
+  padding:11px 24px!important;
+  border-radius:30px!important;
+  font-weight:700!important;
+  font-size:13px!important;
+  box-shadow:0 4px 14px rgba(181,63,30,0.4);
+}
+
+/* Page Banner */
+.page-header{
+  background:var(--soil);
+  position:relative;
+  padding:90px 5vw 70px;
+  text-align:center;
+  overflow:hidden;
+}
+.page-header-bg{
+  position:absolute;
+  inset:0;
+  background-image:url('hero_farm_banner.jpg');
+  background-size:cover;
+  background-position:center;
+  opacity:0.45;
+}
+.page-header-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(26,18,11,0.75) 0%, rgba(26,18,11,0.92) 100%);
+}
+.page-header-inner{
+  position:relative;
+  z-index:2;
+  max-width:800px;
+  margin:0 auto;
+}
+.page-header-eyebrow{
+  font-size:12px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--straw);
+  font-weight:700;
+  margin-bottom:12px;
+}
+.page-header h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(40px, 5vw, 64px);
+  color:#fff;
+  font-weight:700;
+  line-height:1.05;
+  margin-bottom:16px;
+}
+.page-header p{
+  font-size:16.5px;
+  color:rgba(251,248,242,0.85);
+  line-height:1.7;
+  font-weight:300;
+}
+
+/* Gallery Section */
+.gallery-section{
+  padding:60px 0 100px;
+}
+.container{
+  max-width:1240px;
+  margin:0 auto;
+  padding:0 5vw;
+}
+.filter-bar{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:48px;
+}
+.filter-btn{
+  background:#fff;
+  border:1px solid var(--sand);
+  color:var(--soil);
+  padding:10px 22px;
+  border-radius:30px;
+  font-family:'Outfit',sans-serif;
+  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all .2s ease;
+}
+.filter-btn:hover, .filter-btn.active{
+  background:var(--leaf);
+  color:#fff;
+  border-color:var(--leaf);
+  box-shadow:0 4px 14px rgba(44,84,48,0.3);
+  transform:translateY(-2px);
+}
+
+/* Gallery Grid */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:26px;
+}
+.gallery-card{
+  background:#fff;
+  border:1px solid rgba(26,18,11,0.08);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  transition:all .3s ease;
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+}
+.gallery-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-lg);
+  border-color:var(--sage);
+}
+.gallery-img-wrap{
+  position:relative;
+  width:100%;
+  height:240px;
+  overflow:hidden;
+  border-radius:var(--radius-md);
+  background:var(--soil);
+}
+.gallery-img-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:var(--radius-md);
+  transition:transform .4s ease;
+  display:block;
+}
+.gallery-card:hover .gallery-img-wrap img{
+  transform:scale(1.06);
+}
+.gallery-badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:rgba(26,18,11,0.75);
+  backdrop-filter:blur(8px);
+  color:var(--straw);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  padding:4px 10px;
+  border-radius:20px;
+  border:1px solid rgba(244,223,161,0.3);
+}
+.gallery-body{
+  padding:18px 12px 14px 12px;
+  display:flex;
+  flex-direction:column;
+  flex-grow:1;
+}
+.gallery-body h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;
+  color:var(--soil);
+  margin-bottom:6px;
+  font-weight:700;
+}
+.gallery-body p{
+  font-size:13.5px;
+  color:var(--mid);
+  line-height:1.6;
+}
+.gallery-tag-loc{
+  margin-top:12px;
+  padding-top:10px;
+  border-top:1px solid var(--offwhite);
+  font-size:11.5px;
+  color:var(--clay);
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+/* Call to action */
+.gallery-cta-banner{
+  background:linear-gradient(135deg, var(--leaf) 0%, #1c361e 100%);
+  border-radius:var(--radius-lg);
+  padding:50px 40px;
+  margin-top:60px;
+  text-align:center;
+  color:#fff;
+  box-shadow:var(--shadow-lg);
+}
+.gallery-cta-banner h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:36px;
+  color:var(--straw);
+  margin-bottom:12px;
+}
+.gallery-cta-banner p{
+  max-width:600px;
+  margin:0 auto 24px;
+  font-size:15px;
+  color:rgba(255,255,255,0.85);
+}
+.btn-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--straw);
+  color:var(--soil);
+  padding:14px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
+  font-size:13.5px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:all .2s;
+}
+.btn-cta:hover{
+  background:#fff;
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer{
+  background:var(--soil);
+  padding:64px 5vw 30px;
+  border-top:1px solid rgba(244,223,161,0.1);
+  color:#fff;
+}
+.footer-top{
+  display:grid;
+  grid-template-columns:300px 1fr 1fr 1fr;
+  gap:44px;
+  margin-bottom:48px;
+}
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:12px;
+}
+.footer-logo-img{
+  width:95px;
+  height:95px;
+  border-radius:0;
+  object-fit:contain;
+  padding:0;
+  border:none;
+  box-shadow:none;
+  background:transparent;
+  display:block;
+}
+.footer-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px;
+  font-weight:700;
+  color:var(--straw);
+}
+.footer-col h4{
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--sage);
+  margin-bottom:16px;
+  font-weight:700;
+}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:10px;}
+.footer-col a{
+  color:rgba(251,248,242,0.55);
+  text-decoration:none;
+  font-size:13.5px;
+  transition:color .2s;
+}
+.footer-col a:hover{color:var(--straw);}
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+  color:rgba(251,248,242,0.4);
+  border-top:1px solid rgba(255,255,255,0.08);
+  padding-top:24px;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+/* Floating WhatsApp Action Button */
+.floating-wa-btn{
+  position:fixed;
+  bottom:28px;
+  right:28px;
+  z-index:99999;
+  background:#25d366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  font-family:'Outfit',sans-serif;
+  font-size:14px;
+  font-weight:700;
+  box-shadow:0 8px 24px rgba(37,211,102,0.45), 0 4px 12px rgba(0,0,0,0.2);
+  transition:all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border:2px solid rgba(255,255,255,0.3);
+}
+.floating-wa-btn:hover{
+  transform:scale(1.08) translateY(-4px);
+  box-shadow:0 12px 30px rgba(37,211,102,0.6), 0 6px 16px rgba(0,0,0,0.3);
+  background:#20ba5a;
+  color:#fff;
+}
+.floating-wa-icon{
+  font-size:22px;
+  line-height:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .nav-brand-text{display:none!important;}
+}
+@media(max-width:680px){
+  .nav-links{display:none;}
+  .nav-brand-text{display:none!important;}
+  .gallery-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .floating-wa-text{display:none;}
+  .floating-wa-btn{padding:16px;border-radius:50%;bottom:20px;right:20px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>🌿 Organic, free-range and farm fresh produce from Bronkhorstspruit</span>
+  <a href="products.html" style="margin-left:8px;">View Products →</a>
+</div>
+
+<!-- Nav -->
+<nav class="nav" role="navigation">
+  <a href="index.html" class="nav-brand">
+    <img src="vidaboa_logo.svg" alt="Vidaboa Farm Logo" class="nav-logo-img" width="105" height="105">
+    <div class="nav-brand-text">
+      <div class="nav-logo-title">VIDA<em>BOA</em> FARM</div>
+      <div class="nav-logo-sub">Highveld Organic · Est. 2020</div>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Our Products</a></li>
+    <li><a href="gallery.html" class="active">Farm Gallery</a></li>
+    <li><a href="nana_banana.html">Nana Banana 🍌</a></li>
+    <li><a href="products.html#order" class="nav-order-btn">🛒 Place Order</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-overlay"></div>
+  <div class="page-header-inner">
+    <p class="page-header-eyebrow">Real Life On 29 Hectares</p>
+    <h1>Farm Photo Gallery</h1>
+    <p>Take an authentic look inside daily operations at Vidaboa Farm in Bronkhorstspruit. From free-roaming poultry and companion beds to our Nana Banana crop and sustainable soil stewardship.</p>
+  </div>
+</header>
+
+<main class="gallery-section">
+  <div class="container">
+    
+    <!-- Filter Buttons -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All Photos</button>
+      <button class="filter-btn" onclick="filterGallery('poultry', this)">🐔 Poultry & Livestock</button>
+      <button class="filter-btn" onclick="filterGallery('crops', this)">🥬 Organic Crops</button>
+      <button class="filter-btn" onclick="filterGallery('banana', this)">🍌 Nana Banana</button>
+      <button class="filter-btn" onclick="filterGallery('farm', this)">🌾 Farm Life & Soil</button>
+    </div>
+
+    <!-- Gallery Cards Grid with Small Padding -->
+    <div class="gallery-grid" id="galleryGrid">
+      
+      <!-- 1. Free Range Broilers -->
+      <div class="gallery-card" data-category="poultry">
+        <div class="gallery-img-wrap">
+          <img src="broiler_chickens.jpg" alt="Free-Range Broiler Chickens on Green Pasture">
+          <span class="gallery-badge">Free-Range</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Pasture-Raised Broilers</h3>
+          <p>Healthy white broilers foraging freely on sunny open pastures with clean borehole water and natural grains.</p>
+          <div class="gallery-tag-loc">📍 Bronkhorstspruit · Broiler Sector</div>
+        </div>
+      </div>
+
+      <!-- 2. Nana Banana Harvest -->
+      <div class="gallery-card" data-category="banana">
+        <div class="gallery-img-wrap">
+          <img src="nana_banana.jpg" alt="Fresh Ripe Organic Nana Bananas">
+          <span class="gallery-badge">Nana Banana</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Nana Banana Harvest</h3>
+          <p>Golden, sun-ripened organic bananas harvested with rich natural sweetness and zero artificial ripening chemicals.</p>
+          <div class="gallery-tag-loc">📍 Fruit Orchard · Nana Crop</div>
+        </div>
+      </div>
+
+      <!-- 3. Banana Plantation Trees -->
+      <div class="gallery-card" data-category="banana">
+        <div class="gallery-img-wrap">
+          <img src="banana_tree.jpg" alt="Lush Banana Trees on Farm">
+          <span class="gallery-badge">Orchard</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Banana Grove & Canopy</h3>
+          <p>Lush broad-leaf banana palms flourishing with organic compost nourishment and Highveld sunlight.</p>
+          <div class="gallery-tag-loc">📍 Orchard Zone · Tree Canopy</div>
+        </div>
+      </div>
+
+      <!-- 4. Swiss Chard Beds -->
+      <div class="gallery-card" data-category="crops">
+        <div class="gallery-img-wrap">
+          <img src="swiss_chard.jpg" alt="Crisp Organic Swiss Chard">
+          <span class="gallery-badge">Vegetables</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Organic Swiss Chard</h3>
+          <p>Vibrant, crisp leafy greens grown in companion-planted beds fed by our own animal compost.</p>
+          <div class="gallery-tag-loc">📍 Growing Beds · Sector 2</div>
+        </div>
+      </div>
+
+      <!-- 5. Fresh Herbs -->
+      <div class="gallery-card" data-category="crops">
+        <div class="gallery-img-wrap">
+          <img src="fresh_herbs.jpg" alt="Fresh Culinary Herbs Basil Parsley">
+          <span class="gallery-badge">Herbs</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Culinary Herb Harvest</h3>
+          <p>Aromatic bundles of sweet basil, parsley, and rosemary tied fresh for local kitchens and vendors.</p>
+          <div class="gallery-tag-loc">📍 Nursery · Herb Gardens</div>
+        </div>
+      </div>
+
+      <!-- 6. Baby Goats -->
+      <div class="gallery-card" data-category="poultry">
+        <div class="gallery-img-wrap">
+          <img src="baby_goats.jpg" alt="Playful Goat Kid on Pasture">
+          <span class="gallery-badge">Goats</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Pasture-Born Goat Kids</h3>
+          <p>Young healthy kids grazing naturally alongside the mother herd for rotational pasture regeneration.</p>
+          <div class="gallery-tag-loc">📍 Veld Pasture · Goat Herd</div>
+        </div>
+      </div>
+
+      <!-- 7. Runner Chickens -->
+      <div class="gallery-card" data-category="poultry">
+        <div class="gallery-img-wrap">
+          <img src="runner_chickens.jpg" alt="Heritage Runner Hens">
+          <span class="gallery-badge">Heritage</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Heritage Runner Chickens</h3>
+          <p>Hardy, active foraging hens prized for traditional cooking and authentic natural South African flavor.</p>
+          <div class="gallery-tag-loc">📍 Open Veld · Poultry Yard</div>
+        </div>
+      </div>
+
+      <!-- 8. Tomato Harvest -->
+      <div class="gallery-card" data-category="crops">
+        <div class="gallery-img-wrap">
+          <img src="tomato_harvest.jpg" alt="Ripe Red Tomatoes on Vine">
+          <span class="gallery-badge">Harvest</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Vine-Ripened Tomatoes</h3>
+          <p>Our very first crop established in 2021 — sweet, juicy tomatoes thriving in manure-enriched soil.</p>
+          <div class="gallery-tag-loc">📍 Vegetable Sector · Tomato Rows</div>
+        </div>
+      </div>
+
+      <!-- 9. Seasonal Harvest Crate -->
+      <div class="gallery-card" data-category="crops">
+        <div class="gallery-img-wrap">
+          <img src="seasonal_veg.jpg" alt="Organic Vegetable Harvest Crate">
+          <span class="gallery-badge">Produce Crate</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Fresh Weekly Produce Crates</h3>
+          <p>Packed on order morning with tomatoes, broccoli, beetroot, and green beans for direct city delivery.</p>
+          <div class="gallery-tag-loc">📍 Packing Shed · Weekly Batch</div>
+        </div>
+      </div>
+
+      <!-- 10. Farm Greenhouse Nursery -->
+      <div class="gallery-card" data-category="farm">
+        <div class="gallery-img-wrap">
+          <img src="farm_greenhouse.jpg" alt="Greenhouse Seedling Nursery">
+          <span class="gallery-badge">Infrastructure</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Seedling Greenhouse</h3>
+          <p>Nurturing strong organic seedlings protected from extreme Highveld weather before planting out.</p>
+          <div class="gallery-tag-loc">📍 Nursery Zone · Protected Growing</div>
+        </div>
+      </div>
+
+      <!-- 11. Free Range Eggs -->
+      <div class="gallery-card" data-category="poultry">
+        <div class="gallery-img-wrap">
+          <img src="free_range_eggs.jpg" alt="Fresh Free-Range Eggs in Basket">
+          <span class="gallery-badge">Farm Eggs</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Farm-Fresh Free Range Eggs</h3>
+          <p>Golden-yolk nutritious eggs collected daily from our pasture-roaming hens.</p>
+          <div class="gallery-tag-loc">📍 Roosting Sheds · Daily Collection</div>
+        </div>
+      </div>
+
+      <!-- 12. Regenerative Living Soil -->
+      <div class="gallery-card" data-category="farm">
+        <div class="gallery-img-wrap">
+          <img src="farm_soil_sustainability.jpg" alt="Farmer Hands Holding Living Soil">
+          <span class="gallery-badge">Regenerative</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Rich Organic Living Soil</h3>
+          <p>Hands-on regenerative soil stewardship turning farm manure and plant waste into dark, fertile compost.</p>
+          <div class="gallery-tag-loc">📍 Compost Bays · 29 Hectares</div>
+        </div>
+      </div>
+
+      <!-- 13. Farmer Harvesting in Field -->
+      <div class="gallery-card" data-category="farm">
+        <div class="gallery-img-wrap">
+          <img src="farmer_in_field.jpg" alt="Farmer Working in Field">
+          <span class="gallery-badge">Farm Life</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Morning Harvest Work</h3>
+          <p>Carefully hand-harvesting greens at daybreak to capture optimum hydration and morning crispness.</p>
+          <div class="gallery-tag-loc">📍 Highveld Morning · Field Operations</div>
+        </div>
+      </div>
+
+      <!-- 14. Farm Water Reservoir -->
+      <div class="gallery-card" data-category="farm">
+        <div class="gallery-img-wrap">
+          <img src="farm_dam_water.jpg" alt="Farm Dam and Water Conservation">
+          <span class="gallery-badge">Conservation</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Clean Water Dam</h3>
+          <p>Sustainable borehole water storage providing life to our animals, banana trees, and vegetables.</p>
+          <div class="gallery-tag-loc">📍 Water Storage · Farm Dam</div>
+        </div>
+      </div>
+
+      <!-- 15. Farm-to-Table Cooking -->
+      <div class="gallery-card" data-category="farm">
+        <div class="gallery-img-wrap">
+          <img src="farm_to_table.jpg" alt="Fresh Cooked Farm-to-Table Meal">
+          <span class="gallery-badge">Farm to Table</span>
+        </div>
+        <div class="gallery-body">
+          <h3>Honest Nourishing Food</h3>
+          <p>Real food straight from real soil — bringing families back to wholesome, chemical-free home dining.</p>
+          <div class="gallery-tag-loc">📍 Farm Kitchen · Wholesome Living</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="gallery-cta-banner">
+      <h2>Taste What Real Soil Tastes Like</h2>
+      <p>Order direct from Vidaboa Farm and receive fresh free-range chicken, Nana bananas, and seasonal produce delivered straight to your door.</p>
+      <a href="products.html" class="btn-cta">🛒 Explore Products & Order Online</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">
+        <img src="vidaboa_logo.svg" alt="Vidaboa Farm Logo" class="footer-logo-img" width="95" height="95">
+        <div class="footer-title">VIDABOA FARM</div>
+      </div>
+      <p style="font-size:13.5px;color:rgba(251,248,242,0.5);line-height:1.7;">A 29-hectare organic family farm in Bronkhorstspruit, Gauteng, committed to providing wholesome, chemical-free food since 2020.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="gallery.html">Farm Gallery</a></li>
+        <li><a href="nana_banana.html">Nana Banana</a></li>
+        <li><a href="products.html#order">Order Direct</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Delivery Cities</h4>
+      <ul>
+        <li><a href="products.html#order">Pretoria</a></li>
+        <li><a href="products.html#order">Johannesburg</a></li>
+        <li><a href="products.html#order">Bronkhorstspruit</a></li>
+        <li><a href="products.html#order">Witbank (eMalahleni)</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Direct Contact</h4>
+      <ul>
+        <li><a href="https://wa.me/27846494802" target="_blank">WhatsApp: +27 84 649 4802</a></li>
+        <li><a href="mailto:vidaboafarm@gmail.com">vidaboafarm@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/vidaboafarm" target="_blank">Instagram: @vidaboafarm</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Vidaboa Farm. All rights reserved. Bronkhorstspruit, Gauteng.</span>
+    <span>Organic · Free-Range · Community-Grown</span>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp Action Button -->
+<a href="https://wa.me/27846494802?text=Hi%20Vidaboa%20Farm%2C%20I%20would%20like%20to%20place%20an%20order" target="_blank" rel="noopener" class="floating-wa-btn" aria-label="Chat on WhatsApp">
+  <span class="floating-wa-icon">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </span>
+  <span class="floating-wa-text">Chat on WhatsApp</span>
+</a>
+
+<script>
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const cards = document.querySelectorAll('.gallery-card');
+  cards.forEach(card => {
+    if (cat === 'all' || card.getAttribute('data-category') === cat) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>

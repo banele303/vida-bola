@@ -1,0 +1,2415 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vidaboa Farm | Organic Highveld Food, Free-Range Chickens & Fresh Produce</title>
+<meta name="description" content="Vidaboa Farm is a family-owned organic farm in Bronkhorstspruit, Gauteng. Free-range broilers, runner hens, fresh Swiss chard, herbs, vegetables and goats delivered to Pretoria, Johannesburg and Witbank.">
+<meta property="og:title" content="Vidaboa Farm | Real Food From Real Soil">
+<meta property="og:description" content="Organic, free-range and farm fresh produce delivered direct from our 29-hectare Highveld farm.">
+<meta property="og:image" content="hero_farm_banner.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --soil:#1a120b;
+  --earth:#3d2817;
+  --clay:#85502c;
+  --sand:#d6b68e;
+  --straw:#f4dfa1;
+  --cream:#fbf8f2;
+  --offwhite:#f4eee2;
+  --leaf:#2c5430;
+  --fern:#3d7242;
+  --sage:#6f9f74;
+  --mint:#d5ebd8;
+  --rust:#b53f1e;
+  --ember:#d95b28;
+  --sun:#e5a91e;
+  --ink:#170f08;
+  --mid:#5c4737;
+  --light:#e8dece;
+  --card-bg:#ffffff;
+  --wa:#25d366;
+  --ig:#e1306c;
+  --fb:#1877f2;
+  --radius-sm:8px;
+  --radius-md:14px;
+  --radius-lg:22px;
+  --shadow-sm:0 2px 8px rgba(26,18,11,0.06);
+  --shadow-md:0 10px 30px rgba(26,18,11,0.08);
+  --shadow-lg:0 20px 40px rgba(26,18,11,0.14);
+}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Outfit',sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+
+/* Accessibility */
+.skip{
+  position:absolute;
+  left:-9999px;
+  top:4px;
+  background:var(--leaf);
+  color:#fff;
+  padding:10px 18px;
+  border-radius:var(--radius-sm);
+  font-size:14px;
+  font-weight:600;
+  z-index:99999;
+}
+.skip:focus{left:10px;}
+
+/* Top Alert Bar */
+.topbar{
+  background:linear-gradient(90deg, #203f23 0%, #2c5430 50%, #203f23 100%);
+  padding:9px 5vw;
+  text-align:center;
+  font-size:13px;
+  color:rgba(255,255,255,0.92);
+  border-bottom:1px solid rgba(244,223,161,0.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.topbar a{
+  color:var(--straw);
+  font-weight:700;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  background:rgba(255,255,255,0.12);
+  padding:2px 10px;
+  border-radius:20px;
+  transition:all .2s;
+}
+.topbar a:hover{
+  background:var(--straw);
+  color:var(--soil);
+}
+
+/* Navigation Header with Recreated Logo */
+.nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(26,18,11,0.96);
+  backdrop-filter:blur(16px);
+  padding:0 5vw;
+  height:110px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(244,223,161,0.15);
+  transition:all .3s;
+}
+.nav-brand{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  text-decoration:none;
+}
+.nav-logo-img{
+  width:105px;
+  height:105px;
+  border-radius:0;
+  object-fit:contain;
+  padding:0;
+  margin:0;
+  border:none;
+  box-shadow:none;
+  background:transparent;
+  transition:transform .3s ease;
+  display:block;
+}
+.nav-brand:hover .nav-logo-img{
+  transform:scale(1.06);
+}
+.nav-brand-text{
+  display:flex;
+  flex-direction:column;
+}
+.nav-logo-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px;
+  font-weight:700;
+  color:var(--straw);
+  letter-spacing:1px;
+  line-height:1;
+}
+.nav-logo-title em{
+  color:var(--sage);
+  font-style:normal;
+}
+.nav-logo-sub{
+  font-size:10.5px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:rgba(244,223,161,0.7);
+  margin-top:3px;
+}
+.nav-links{
+  display:flex;
+  gap:24px;
+  list-style:none;
+  align-items:center;
+}
+.nav-links a{
+  color:rgba(251,248,242,0.8);
+  text-decoration:none;
+  font-size:13.5px;
+  font-weight:500;
+  letter-spacing:0.5px;
+  transition:color .2s;
+  position:relative;
+  padding:4px 0;
+}
+.nav-links a::after{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:0;
+  height:2px;
+  background:var(--straw);
+  transition:width .25s;
+}
+.nav-links a:hover{color:var(--straw);}
+.nav-links a:hover::after{width:100%;}
+.nav-order-btn{
+  background:linear-gradient(135deg, var(--rust) 0%, var(--ember) 100%)!important;
+  color:#fff!important;
+  padding:11px 24px!important;
+  border-radius:30px!important;
+  font-weight:700!important;
+  font-size:13px!important;
+  box-shadow:0 4px 14px rgba(181,63,30,0.4);
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  transition:transform .2s, box-shadow .2s!important;
+}
+.nav-order-btn::after{display:none!important;}
+.nav-order-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(181,63,30,0.6);
+}
+.nav-socials{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.nav-soc-icon{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:15px;
+  text-decoration:none;
+  transition:transform .2s, opacity .2s;
+}
+.nav-soc-icon:hover{
+  transform:translateY(-2px);
+  opacity:0.9;
+}
+
+/* ================= RECREATED HERO SECTION ================= */
+.hero{
+  min-height:92vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  padding:60px 0 80px;
+  background-color:var(--soil);
+  overflow:hidden;
+}
+.hero-photo-bg{
+  position:absolute;
+  inset:0;
+  background-image:url('hero_farm_banner.jpg');
+  background-size:cover;
+  background-position:center;
+  opacity:0.76;
+  filter:saturate(1.2) contrast(1.1);
+  transform:scale(1.02);
+  transition:transform 8s ease-out;
+}
+.hero:hover .hero-photo-bg{
+  transform:scale(1.05);
+}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse 90% 70% at 75% 40%, rgba(44,84,48,0.2) 0%, transparent 60%),
+             linear-gradient(180deg, rgba(26,18,11,0.58) 0%, rgba(26,18,11,0.35) 45%, rgba(26,18,11,0.88) 100%),
+             linear-gradient(90deg, rgba(26,18,11,0.85) 0%, rgba(26,18,11,0.48) 58%, rgba(26,18,11,0.22) 100%);
+}
+.hero-inner{
+  position:relative;
+  z-index:2;
+  max-width:1240px;
+  margin:0 auto;
+  padding:0 5vw;
+  display:grid;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:60px;
+  align-items:center;
+}
+.hero-content{
+  max-width:640px;
+}
+.hero-badge-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:rgba(26,18,11,0.65);
+  border:1px solid rgba(244,223,161,0.35);
+  backdrop-filter:blur(10px);
+  padding:7px 18px;
+  border-radius:30px;
+  color:var(--straw);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}
+.hero-badge-pill span.dot{
+  width:8px;
+  height:8px;
+  background:var(--wa);
+  border-radius:50%;
+  box-shadow:0 0 8px var(--wa);
+}
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(46px, 6vw, 76px);
+  font-weight:700;
+  line-height:1.02;
+  color:#fff;
+  margin-bottom:20px;
+  letter-spacing:-0.5px;
+  text-shadow:0 3px 14px rgba(0,0,0,0.7);
+}
+.hero h1 em{
+  font-style:italic;
+  color:var(--straw);
+  display:block;
+  font-weight:600;
+  text-shadow:0 2px 10px rgba(0,0,0,0.6);
+}
+.hero-desc{
+  font-size:17px;
+  color:rgba(251,248,242,0.92);
+  line-height:1.75;
+  font-weight:400;
+  margin-bottom:34px;
+  text-shadow:0 2px 10px rgba(0,0,0,0.8);
+}
+.hero-desc strong{
+  color:#fff;
+  font-weight:700;
+}
+.hero-ctas{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:36px;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:15px 30px;
+  border-radius:8px;
+  font-size:13.5px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  text-decoration:none;
+  cursor:pointer;
+  transition:all .25s ease;
+  font-family:'Outfit',sans-serif;
+  border:none;
+}
+.btn-primary{
+  background:linear-gradient(135deg, var(--leaf) 0%, var(--fern) 100%);
+  color:#fff;
+  box-shadow:0 6px 20px rgba(44,84,48,0.45);
+}
+.btn-primary:hover{
+  background:linear-gradient(135deg, #376a3d 0%, #4b8b51 100%);
+  transform:translateY(-2px);
+  box-shadow:0 10px 26px rgba(44,84,48,0.6);
+}
+.btn-outline-gold{
+  background:rgba(26,18,11,0.6);
+  color:var(--straw);
+  border:1px solid rgba(244,223,161,0.5);
+  backdrop-filter:blur(8px);
+}
+.btn-outline-gold:hover{
+  background:rgba(244,223,161,0.22);
+  border-color:var(--straw);
+  transform:translateY(-2px);
+}
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+  padding-top:20px;
+  border-top:1px solid rgba(251,248,242,0.18);
+}
+.hero-stat-item h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;
+  font-weight:700;
+  color:var(--straw);
+  line-height:1;
+  text-shadow:0 2px 8px rgba(0,0,0,0.6);
+}
+.hero-stat-item p{
+  font-size:12px;
+  color:rgba(251,248,242,0.85);
+  margin-top:4px;
+  text-transform:uppercase;
+  letter-spacing:0.8px;
+  font-weight:600;
+  text-shadow:0 1px 6px rgba(0,0,0,0.7);
+}
+
+/* Hero Interactive Operations Card with Real Photos */
+.hero-ops-card{
+  background:rgba(26,18,11,0.88);
+  border:1px solid rgba(244,223,161,0.25);
+  border-radius:var(--radius-lg);
+  padding:24px;
+  backdrop-filter:blur(16px);
+  box-shadow:var(--shadow-lg), 0 0 30px rgba(0,0,0,0.5);
+}
+.hero-ops-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:18px;
+  padding-bottom:12px;
+  border-bottom:1px solid rgba(251,248,242,0.12);
+}
+.hero-ops-title{
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--sage);
+  font-weight:700;
+}
+.hero-ops-badge{
+  font-size:11px;
+  background:rgba(244,223,161,0.18);
+  color:var(--straw);
+  padding:3px 10px;
+  border-radius:12px;
+  font-weight:600;
+}
+.hero-ops-grid{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.hero-ops-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:var(--radius-md);
+  padding:10px 14px;
+  text-decoration:none;
+  transition:all .25s;
+}
+.hero-ops-item:hover{
+  background:rgba(244,223,161,0.12);
+  border-color:rgba(244,223,161,0.4);
+  transform:translateX(4px);
+}
+.hero-ops-img{
+  width:60px;
+  height:60px;
+  border-radius:10px;
+  object-fit:cover;
+  flex-shrink:0;
+  padding:3px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(244,223,161,0.35);
+}
+.hero-ops-info h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;
+  color:var(--straw);
+  font-weight:700;
+  line-height:1.2;
+}
+.hero-ops-info p{
+  font-size:12px;
+  color:rgba(251,248,242,0.7);
+  line-height:1.4;
+  margin-top:2px;
+}
+.hero-ops-tag{
+  margin-left:auto;
+  font-size:11px;
+  color:var(--sage);
+  font-weight:600;
+}
+
+/* ================= LIVE PHOTO STRIP ================= */
+.photo-gallery-strip{
+  background:var(--soil);
+  padding:34px 0;
+  border-top:1px solid rgba(244,223,161,0.12);
+  border-bottom:1px solid rgba(244,223,161,0.12);
+}
+.photo-strip-container{
+  max-width:1240px;
+  margin:0 auto;
+  padding:0 5vw;
+}
+.photo-strip-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:18px;
+}
+.photo-strip-header p{
+  font-size:11px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--sand);
+  font-weight:600;
+}
+.photo-strip-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:16px;
+}
+.photo-strip-card{
+  position:relative;
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  aspect-ratio:16/10;
+  box-shadow:var(--shadow-md);
+  border:1px solid rgba(251,248,242,0.12);
+  padding:8px;
+  background:rgba(255,255,255,0.05);
+}
+.photo-strip-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:calc(var(--radius-md) - 4px);
+  transition:transform .4s ease;
+  display:block;
+}
+.photo-strip-card:hover img{
+  transform:scale(1.06);
+}
+.photo-strip-label{
+  position:absolute;
+  bottom:8px;
+  left:8px;
+  right:8px;
+  padding:10px 12px;
+  background:linear-gradient(to top, rgba(26,18,11,0.92) 0%, rgba(26,18,11,0.3) 100%);
+  color:#fff;
+  font-size:11.5px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-radius:0 0 calc(var(--radius-md) - 4px) calc(var(--radius-md) - 4px);
+}
+
+/* ================= SOCIAL CONNECT STRIP ================= */
+.social-strip{
+  background:linear-gradient(135deg, var(--earth) 0%, #29180c 100%);
+  padding:22px 5vw;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  flex-wrap:wrap;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.social-strip-label{
+  font-size:11px;
+  color:rgba(251,248,242,0.6);
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  font-weight:600;
+}
+.soc-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 20px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:600;
+  transition:transform .2s, box-shadow .2s;
+}
+.soc-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(0,0,0,0.25);
+}
+.soc-wa{background:var(--wa);color:#fff;}
+.soc-ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;}
+.soc-fb{background:var(--fb);color:#fff;}
+.soc-em{background:var(--rust);color:#fff;}
+
+/* Common Section Styles */
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 5vw;
+}
+.section-eyebrow{
+  font-size:11.5px;
+  letter-spacing:3.5px;
+  text-transform:uppercase;
+  color:var(--clay);
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:700;
+}
+.section-eyebrow::before{
+  content:'';
+  display:block;
+  width:24px;
+  height:2px;
+  background:var(--clay);
+}
+.section-eyebrow.light{color:var(--straw);}
+.section-eyebrow.light::before{background:var(--straw);}
+.section-h{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(34px, 4.5vw, 52px);
+  font-weight:700;
+  color:var(--soil);
+  line-height:1.06;
+  margin-bottom:18px;
+}
+.section-h.light{color:#fff;}
+
+/* ================= ABOUT STORY SECTION ================= */
+.about{
+  background:var(--offwhite);
+  padding:100px 0;
+  position:relative;
+}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:64px;
+  align-items:center;
+}
+.about-text p{
+  font-size:16px;
+  color:var(--mid);
+  margin-bottom:18px;
+  line-height:1.8;
+}
+.about-text strong{color:var(--soil);}
+.history-callout{
+  background:#fff;
+  border-left:4px solid var(--leaf);
+  padding:22px 26px;
+  margin-top:28px;
+  border-radius:0 var(--radius-md) var(--radius-md) 0;
+  box-shadow:var(--shadow-sm);
+}
+.history-callout strong{
+  color:var(--soil);
+  font-size:16px;
+  display:block;
+  margin-bottom:6px;
+}
+.history-callout p{
+  font-size:14.5px;
+  color:var(--mid);
+  font-style:italic;
+  margin-bottom:0;
+  line-height:1.65;
+}
+.about-visual{
+  position:relative;
+}
+.about-photo-card{
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+  position:relative;
+  aspect-ratio:4/3;
+  padding:10px;
+  background:#fff;
+  border:1px solid var(--light);
+}
+.about-photo-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:var(--radius-md);
+  display:block;
+}
+.about-badge-float{
+  position:absolute;
+  bottom:-20px;
+  right:-20px;
+  width:120px;
+  height:120px;
+  background:linear-gradient(135deg, var(--straw) 0%, #dfc37a 100%);
+  color:var(--soil);
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-weight:700;
+  text-align:center;
+  font-size:12px;
+  line-height:1.2;
+  border:5px solid var(--offwhite);
+  box-shadow:var(--shadow-md);
+}
+.about-badge-float span{
+  font-size:30px;
+  font-weight:800;
+  line-height:1;
+}
+
+/* ================= TIMELINE SECTION ================= */
+.history{
+  background:var(--cream);
+  padding:96px 0;
+}
+.history-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:64px;
+  align-items:start;
+}
+.history-intro p{
+  font-size:15.5px;
+  color:var(--mid);
+  line-height:1.8;
+  margin-bottom:16px;
+}
+.timeline{
+  padding-left:30px;
+  position:relative;
+}
+.timeline::before{
+  content:'';
+  position:absolute;
+  left:8px;
+  top:8px;
+  bottom:0;
+  width:2px;
+  background:var(--light);
+}
+.tl-item{
+  position:relative;
+  margin-bottom:32px;
+}
+.tl-dot{
+  position:absolute;
+  left:-30px;
+  top:5px;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  border:3px solid var(--leaf);
+  background:var(--cream);
+  box-shadow:0 0 0 4px rgba(44,84,48,0.15);
+}
+.tl-year{
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--clay);
+  font-weight:700;
+  display:block;
+  margin-bottom:4px;
+}
+.tl-item h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:19px;
+  color:var(--soil);
+  margin-bottom:6px;
+  font-weight:700;
+}
+.tl-item p{
+  font-size:13.5px;
+  color:var(--mid);
+  line-height:1.7;
+}
+
+/* ================= DELIVERY SECTION ================= */
+.delivery{
+  background:linear-gradient(180deg, var(--soil) 0%, #110b06 100%);
+  padding:72px 0;
+  position:relative;
+}
+.delivery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-top:36px;
+}
+.delivery-card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(244,223,161,0.15);
+  border-radius:var(--radius-md);
+  padding:24px 20px;
+  text-align:center;
+  transition:all .3s;
+  backdrop-filter:blur(8px);
+}
+.delivery-card:hover{
+  background:rgba(244,223,161,0.1);
+  border-color:var(--straw);
+  transform:translateY(-4px);
+}
+.delivery-card-icon{
+  font-size:32px;
+  margin-bottom:12px;
+  display:inline-block;
+}
+.delivery-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+  color:var(--straw);
+  margin-bottom:8px;
+  font-weight:700;
+}
+.delivery-card p{
+  font-size:12.5px;
+  color:rgba(251,248,242,0.65);
+  line-height:1.6;
+}
+
+/* ================= PRODUCTS SHOWCASE WITH REAL IMAGES ================= */
+.products{
+  background:var(--offwhite);
+  padding:100px 0;
+}
+.products-header{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  margin-bottom:50px;
+  flex-wrap:wrap;
+  gap:20px;
+}
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:24px;
+}
+.product-card{
+  background:#fff;
+  border:1px solid var(--light);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  display:flex;
+  flex-direction:column;
+  transition:all .3s ease;
+  padding:10px 10px 0 10px;
+}
+.product-card:hover{
+  border-color:var(--sage);
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-lg);
+}
+.product-card.featured{
+  border:2px solid var(--leaf);
+  position:relative;
+}
+.product-featured-ribbon{
+  position:absolute;
+  top:20px;
+  right:20px;
+  background:var(--rust);
+  color:#fff;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  padding:5px 12px;
+  border-radius:20px;
+  z-index:2;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.product-img-wrap{
+  position:relative;
+  width:100%;
+  height:210px;
+  overflow:hidden;
+  border-radius:var(--radius-md);
+  background:var(--soil);
+}
+.product-img-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:var(--radius-md);
+  transition:transform .4s ease;
+  display:block;
+}
+.product-card:hover .product-img-wrap img{
+  transform:scale(1.06);
+}
+.product-body{
+  padding:20px 14px 22px 14px;
+  display:flex;
+  flex-direction:column;
+  flex-grow:1;
+}
+.product-body h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:23px;
+  color:var(--soil);
+  margin-bottom:8px;
+  font-weight:700;
+}
+.product-body p{
+  font-size:14px;
+  color:var(--mid);
+  line-height:1.7;
+  margin-bottom:16px;
+  flex-grow:1;
+}
+.product-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-bottom:18px;
+}
+.product-tag{
+  background:var(--cream);
+  color:var(--clay);
+  font-size:10.5px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  padding:4px 10px;
+  border-radius:20px;
+  border:1px solid var(--light);
+}
+.product-card-footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-top:14px;
+  border-top:1px solid var(--light);
+}
+.product-price-est{
+  font-size:12px;
+  color:var(--mid);
+  font-weight:600;
+}
+.product-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:12.5px;
+  font-weight:700;
+  color:var(--leaf);
+  text-decoration:none;
+  letter-spacing:0.5px;
+  transition:gap .2s;
+}
+.product-link:hover{
+  gap:10px;
+  color:var(--rust);
+}
+
+/* ================= PROMOS & DEALS WITH REAL PHOTO BACKDROPS ================= */
+.promos{
+  background:var(--soil);
+  padding:100px 0;
+  position:relative;
+}
+.promos-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:22px;
+  margin-top:48px;
+}
+.promo-card{
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  position:relative;
+  min-height:270px;
+  box-shadow:var(--shadow-md);
+  border:1px solid rgba(244,223,161,0.15);
+  padding:10px;
+  background:rgba(255,255,255,0.04);
+}
+.promo-bg-img{
+  position:absolute;
+  top:10px;
+  left:10px;
+  right:10px;
+  bottom:10px;
+  width:calc(100% - 20px);
+  height:calc(100% - 20px);
+  object-fit:cover;
+  border-radius:var(--radius-md);
+  filter:brightness(0.35) contrast(1.1);
+  transition:transform .4s;
+}
+.promo-card:hover .promo-bg-img{
+  transform:scale(1.04);
+}
+.promo-card-inner{
+  position:relative;
+  z-index:2;
+  padding:26px;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  background:linear-gradient(180deg, rgba(26,18,11,0.2) 0%, rgba(26,18,11,0.85) 100%);
+  border-radius:var(--radius-md);
+}
+.promo-card-wide{
+  grid-column:span 2;
+}
+.promo-badge{
+  display:inline-block;
+  background:rgba(244,223,161,0.25);
+  backdrop-filter:blur(8px);
+  color:var(--straw);
+  font-size:10.5px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  padding:4px 12px;
+  border-radius:20px;
+  font-weight:700;
+  margin-bottom:14px;
+  align-self:flex-start;
+  border:1px solid rgba(244,223,161,0.4);
+}
+.promo-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px;
+  color:#fff;
+  line-height:1.15;
+  margin-bottom:10px;
+  font-weight:700;
+}
+.promo-card p{
+  font-size:13.5px;
+  color:rgba(251,248,242,0.8);
+  line-height:1.65;
+  margin-bottom:20px;
+}
+.promo-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.3);
+  color:#fff;
+  padding:10px 20px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  transition:all .2s;
+  align-self:flex-start;
+}
+.promo-cta:hover{
+  background:var(--straw);
+  color:var(--soil);
+  border-color:var(--straw);
+  transform:translateY(-2px);
+}
+
+/* ================= DIRECT FARM ORDER SECTION ================= */
+.order-section{
+  background:var(--cream);
+  padding:100px 0;
+}
+.order-grid{
+  display:grid;
+  grid-template-columns:1fr 540px;
+  gap:64px;
+  align-items:start;
+  margin-top:44px;
+}
+.order-info p{
+  font-size:15.5px;
+  color:var(--mid);
+  margin-bottom:16px;
+  line-height:1.8;
+}
+.order-info strong{color:var(--soil);}
+.order-trust-card{
+  background:#fff;
+  border:1px solid var(--light);
+  border-radius:var(--radius-md);
+  padding:20px;
+  margin:24px 0;
+  display:flex;
+  gap:16px;
+  align-items:center;
+  box-shadow:var(--shadow-sm);
+}
+.order-trust-card img{
+  width:80px;
+  height:80px;
+  border-radius:10px;
+  object-fit:cover;
+  flex-shrink:0;
+}
+.order-trust-card h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;
+  color:var(--soil);
+  margin-bottom:4px;
+}
+.order-trust-card p{
+  font-size:12.5px;
+  color:var(--mid);
+  line-height:1.5;
+  margin-bottom:0;
+}
+.contact-links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:20px;
+}
+.cl{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:#fff;
+  border:1px solid var(--light);
+  border-radius:var(--radius-md);
+  padding:14px 18px;
+  text-decoration:none;
+  transition:all .2s;
+}
+.cl:hover{
+  border-color:var(--sage);
+  transform:translateX(4px);
+  box-shadow:var(--shadow-sm);
+}
+.cl-icon{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  flex-shrink:0;
+  color:#fff;
+}
+.cl-text{
+  font-size:13px;
+  color:var(--mid);
+}
+.cl-text strong{
+  display:block;
+  color:var(--soil);
+  font-size:14.5px;
+  margin-bottom:2px;
+}
+
+/* Order Form Card */
+.order-form-card{
+  background:var(--soil);
+  border-radius:var(--radius-lg);
+  padding:36px;
+  box-shadow:var(--shadow-lg);
+  border:1px solid rgba(244,223,161,0.15);
+}
+.order-form-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;
+  color:var(--straw);
+  margin-bottom:20px;
+  font-weight:700;
+}
+.fg{margin-bottom:14px;}
+.fg label{
+  display:block;
+  font-size:10.5px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:rgba(251,248,242,0.55);
+  margin-bottom:6px;
+  font-weight:600;
+}
+.fg input, .fg select, .fg textarea{
+  width:100%;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.14);
+  border-radius:8px;
+  padding:12px 16px;
+  color:var(--cream);
+  font-family:'Outfit',sans-serif;
+  font-size:14px;
+  outline:none;
+  transition:border-color .2s, background .2s;
+}
+.fg input:focus, .fg select:focus, .fg textarea:focus{
+  border-color:var(--straw);
+  background:rgba(255,255,255,0.1);
+}
+.fg input::placeholder, .fg textarea::placeholder{color:rgba(251,248,242,0.3);}
+.fg select option{background:var(--soil);color:var(--cream);}
+.fg textarea{resize:vertical;min-height:75px;}
+.fg-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+.qty-section-label{
+  font-size:10.5px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--straw);
+  margin:18px 0 10px;
+  display:block;
+  font-weight:700;
+}
+.qty-row{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:12px;
+  align-items:center;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,0.07);
+}
+.qty-row:last-child{
+  border-bottom:none;
+  margin-bottom:16px;
+}
+.qty-label{
+  font-size:13.5px;
+  color:rgba(251,248,242,0.9);
+  font-weight:500;
+}
+.qty-sub{
+  font-size:11px;
+  color:rgba(251,248,242,0.45);
+  display:block;
+  margin-top:1px;
+}
+.qty-ctrl{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.qty-btn{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.2);
+  color:var(--straw);
+  font-size:18px;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:all .2s;
+  font-family:'Outfit',sans-serif;
+  line-height:1;
+}
+.qty-btn:hover{
+  background:var(--straw);
+  color:var(--soil);
+}
+.qty-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;
+  color:var(--straw);
+  min-width:28px;
+  text-align:center;
+  font-weight:700;
+}
+.order-summary{
+  background:rgba(244,223,161,0.08);
+  border:1px solid rgba(244,223,161,0.2);
+  border-radius:8px;
+  padding:14px 18px;
+  margin-bottom:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.order-summary-label{
+  font-size:12.5px;
+  color:rgba(251,248,242,0.65);
+}
+.order-summary-val{
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px;
+  color:var(--straw);
+  font-weight:700;
+}
+.submit-btn{
+  width:100%;
+  background:linear-gradient(135deg, var(--leaf) 0%, var(--fern) 100%);
+  color:#fff;
+  border:none;
+  padding:16px;
+  border-radius:30px;
+  font-family:'Outfit',sans-serif;
+  font-size:13.5px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .25s;
+  box-shadow:0 6px 20px rgba(44,84,48,0.4);
+}
+.submit-btn:hover{
+  background:linear-gradient(135deg, #376a3d 0%, #4b8b51 100%);
+  transform:translateY(-2px);
+  box-shadow:0 8px 24px rgba(44,84,48,0.6);
+}
+.form-note{
+  font-size:11.5px;
+  color:rgba(251,248,242,0.4);
+  text-align:center;
+  margin-top:12px;
+  line-height:1.5;
+}
+
+/* ================= VALUES / SUSTAINABILITY ================= */
+.values{
+  background:var(--earth);
+  padding:80px 0;
+  position:relative;
+}
+.values-row{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.val-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:var(--radius-md);
+  padding:28px 22px;
+  text-align:center;
+  transition:all .3s;
+}
+.val-card:hover{
+  background:rgba(244,223,161,0.08);
+  border-color:rgba(244,223,161,0.25);
+  transform:translateY(-4px);
+}
+.val-img{
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  object-fit:cover;
+  margin:0 auto 16px;
+  border:2px solid var(--straw);
+  display:block;
+}
+.val-card h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:21px;
+  color:var(--straw);
+  margin-bottom:8px;
+  font-weight:700;
+}
+.val-card p{
+  font-size:13px;
+  color:rgba(251,248,242,0.7);
+  line-height:1.65;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:var(--soil);
+  padding:64px 5vw 30px;
+  border-top:1px solid rgba(244,223,161,0.1);
+}
+.footer-top{
+  display:grid;
+  grid-template-columns:300px 1fr 1fr 1fr;
+  gap:44px;
+  margin-bottom:48px;
+}
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:12px;
+}
+.footer-logo-img{
+  width:95px;
+  height:95px;
+  border-radius:0;
+  object-fit:contain;
+  padding:0;
+  border:none;
+  box-shadow:none;
+  background:transparent;
+  display:block;
+}
+
+/* Floating WhatsApp Action Button */
+.floating-wa-btn{
+  position:fixed;
+  bottom:28px;
+  right:28px;
+  z-index:99999;
+  background:#25d366;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  font-family:'Outfit',sans-serif;
+  font-size:14px;
+  font-weight:700;
+  box-shadow:0 8px 24px rgba(37,211,102,0.45), 0 4px 12px rgba(0,0,0,0.2);
+  transition:all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border:2px solid rgba(255,255,255,0.3);
+}
+.floating-wa-btn:hover{
+  transform:scale(1.08) translateY(-4px);
+  box-shadow:0 12px 30px rgba(37,211,102,0.6), 0 6px 16px rgba(0,0,0,0.3);
+  background:#20ba5a;
+  color:#fff;
+}
+.floating-wa-icon{
+  font-size:22px;
+  line-height:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+@media(max-width:600px){
+  .floating-wa-text{display:none;}
+  .floating-wa-btn{
+    padding:16px;
+    border-radius:50%;
+    bottom:20px;
+    right:20px;
+  }
+}
+.footer-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px;
+  font-weight:700;
+  color:var(--straw);
+  letter-spacing:1px;
+}
+.footer-title em{
+  color:var(--sage);
+  font-style:normal;
+}
+.footer-tagline{
+  font-size:13.5px;
+  color:rgba(251,248,242,0.5);
+  line-height:1.7;
+  margin-bottom:18px;
+}
+.footer-socials{
+  display:flex;
+  gap:10px;
+}
+.fsoc{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:15px;
+  text-decoration:none;
+  transition:all .2s;
+}
+.fsoc:hover{
+  transform:translateY(-2px);
+  opacity:0.85;
+}
+.footer-col h4{
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--sage);
+  margin-bottom:16px;
+  font-weight:700;
+}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:10px;}
+.footer-col a{
+  color:rgba(251,248,242,0.55);
+  text-decoration:none;
+  font-size:13.5px;
+  transition:color .2s;
+}
+.footer-col a:hover{color:var(--straw);}
+.footer-divider{
+  border:none;
+  border-top:1px solid rgba(255,255,255,0.08);
+  margin-bottom:24px;
+}
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+  color:rgba(251,248,242,0.4);
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+/* Toast */
+.toast{
+  position:fixed;
+  bottom:28px;
+  right:28px;
+  background:var(--leaf);
+  color:#fff;
+  padding:16px 24px;
+  border-radius:10px;
+  font-size:14px;
+  font-weight:600;
+  transform:translateY(100px);
+  opacity:0;
+  transition:all .4s ease;
+  z-index:9999;
+  max-width:340px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.35);
+  border:1px solid rgba(255,255,255,0.2);
+}
+.toast.show{
+  transform:translateY(0);
+  opacity:1;
+}
+
+/* Responsive Breakpoints */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr; gap:40px;}
+  .about-grid{grid-template-columns:1fr; gap:40px;}
+  .order-grid{grid-template-columns:1fr; gap:40px;}
+  .history-grid{grid-template-columns:1fr; gap:40px;}
+  .photo-strip-grid{grid-template-columns:repeat(2, 1fr);}
+  .products-grid{grid-template-columns:repeat(2, 1fr);}
+  .promos-grid{grid-template-columns:repeat(2, 1fr);}
+  .promo-card-wide{grid-column:span 2;}
+  .values-row{grid-template-columns:repeat(2, 1fr);}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .nav-brand-text{display:none!important;}
+  .delivery-grid{grid-template-columns:repeat(2, 1fr);}
+  .hero h1{font-size:42px;}
+  .about-badge-float{display:none;}
+}
+@media(max-width:600px){
+  .products-grid{grid-template-columns:1fr;}
+  .promos-grid{grid-template-columns:1fr;}
+  .promo-card-wide{grid-column:span 1;}
+  .delivery-grid{grid-template-columns:1fr;}
+  .values-row{grid-template-columns:1fr;}
+  .fg-row{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .photo-strip-grid{grid-template-columns:1fr;}
+  .hero-stats{grid-template-columns:1fr; gap:12px;}
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to main content</a>
+
+<!-- Top Alert Bar -->
+<div class="topbar">
+  <span>🌿 Organic, free-range and farm fresh produce from Bronkhorstspruit</span>
+  <span>• Delivering to Pretoria, Johannesburg, Witbank & surrounds</span>
+  <a href="#order">Place Order →</a>
+</div>
+
+<!-- Main Sticky Nav with Recreated Logo -->
+<nav class="nav" role="navigation" aria-label="Main Navigation">
+  <a href="index.html" class="nav-brand">
+    <img src="vidaboa_logo.svg" alt="Vidaboa Farm Logo" class="nav-logo-img" width="105" height="105">
+    <div class="nav-brand-text">
+      <div class="nav-logo-title">VIDA<em>BOA</em> FARM</div>
+      <div class="nav-logo-sub">Highveld Organic · Est. 2020</div>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="products.html">Our Products</a></li>
+    <li><a href="gallery.html">Farm Gallery</a></li>
+    <li><a href="nana_banana.html">Nana Banana 🍌</a></li>
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#order" class="nav-order-btn">🛒 Place Order</a></li>
+  </ul>
+
+  <div class="nav-socials">
+    <a href="https://wa.me/27846494802?text=Hi%20Vidaboa%20Farm%2C%20I%20would%20like%20to%20enquire%20about%20your%20products" target="_blank" rel="noopener" class="nav-soc-icon" style="background:var(--wa);color:#fff;" title="Chat on WhatsApp">💬</a>
+    <a href="https://www.instagram.com/vidaboafarm" target="_blank" rel="noopener" class="nav-soc-icon" style="background:var(--ig);color:#fff;" title="Follow on Instagram">📷</a>
+    <a href="https://www.facebook.com/vidaboafarm" target="_blank" rel="noopener" class="nav-soc-icon" style="background:var(--fb);color:#fff;" title="Like on Facebook">f</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ================= RECREATED HERO SECTION ================= -->
+<section class="hero">
+  <div class="hero-photo-bg" aria-hidden="true"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge-pill">
+        <span class="dot"></span>
+        <span>Bronkhorstspruit · 29 Hectares Organic</span>
+      </div>
+
+      <h1>Real Food<em>From Real Soil</em></h1>
+      
+      <p class="hero-desc">
+        A family-owned organic farm producing <strong>free-range broilers, runner hens, fresh companion vegetables and healthy goats</strong> on 29 hectares of fertile South African Highveld soil. Pure nutrition, zero synthetic chemicals.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#order" class="btn btn-primary">🛒 Order Fresh Produce</a>
+        <a href="https://wa.me/27846494802?text=Hi%20Vidaboa%20Farm%2C%20I%20would%20like%20to%20order%20farm%20produce" target="_blank" rel="noopener" class="btn btn-outline-gold">💬 Chat on WhatsApp</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat-item">
+          <h3>29 Ha</h3>
+          <p>Organic Highveld Land</p>
+        </div>
+        <div class="hero-stat-item">
+          <h3>100%</h3>
+          <p>Free-Range & Natural</p>
+        </div>
+        <div class="hero-stat-item">
+          <h3>4 Cities</h3>
+          <p>Direct Farm Delivery</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Interactive Operational Card with Real Images -->
+    <div class="hero-ops-card">
+      <div class="hero-ops-header">
+        <span class="hero-ops-title">Fresh From Our Farm</span>
+        <span class="hero-ops-badge">Weekly Harvest</span>
+      </div>
+
+      <div class="hero-ops-grid">
+        <a href="#products" class="hero-ops-item">
+          <img src="broiler_chickens.jpg" alt="Free Range Broiler Chickens" class="hero-ops-img">
+          <div class="hero-ops-info">
+            <h4>Free-Range Broilers</h4>
+            <p>Pasture-raised, clean water, live or dressed.</p>
+          </div>
+          <span class="hero-ops-tag">R40 - R120 →</span>
+        </a>
+
+        <a href="#products" class="hero-ops-item">
+          <img src="swiss_chard.jpg" alt="Fresh Organic Swiss Chard" class="hero-ops-img">
+          <div class="hero-ops-info">
+            <h4>Fresh Swiss Chard</h4>
+            <p>Crisp leafy greens harvested on order day.</p>
+          </div>
+          <span class="hero-ops-tag">R15 - R25 →</span>
+        </a>
+
+        <a href="#products" class="hero-ops-item">
+          <img src="runner_chickens.jpg" alt="Runner Chickens Heritage Breed" class="hero-ops-img">
+          <div class="hero-ops-info">
+            <h4>Runner Chickens</h4>
+            <p>Heritage off-lay birds for traditional flavor.</p>
+          </div>
+          <span class="hero-ops-tag">R60 - R150 →</span>
+        </a>
+
+        <a href="#products" class="hero-ops-item">
+          <img src="farm_goats.jpg" alt="Pasture Raised Goats" class="hero-ops-img">
+          <div class="hero-ops-info">
+            <h4>Goat Herd</h4>
+            <p>Weaners & slaughter weight for celebrations.</p>
+          </div>
+          <span class="hero-ops-tag">Enquire →</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LIVE FARM PHOTO SHOWCASE STRIP ================= -->
+<section class="photo-gallery-strip" id="gallery">
+  <div class="photo-strip-container">
+    <div class="photo-strip-header">
+      <p>📷 Life on Vidaboa Farm — Real Highveld Agriculture</p>
+      <a href="gallery.html" style="color:var(--straw);font-size:13px;text-decoration:none;font-weight:700;background:rgba(244,223,161,0.15);padding:5px 14px;border-radius:20px;border:1px solid rgba(244,223,161,0.3);">View Full Gallery (15+ Photos) →</a>
+    </div>
+
+    <div class="photo-strip-grid">
+      <div class="photo-strip-card">
+        <img src="about_farm_story.jpg" alt="Organic Raised Beds and Crops at Vidaboa Farm">
+        <div class="photo-strip-label">
+          <span>Raised Organic Beds</span>
+          <span>Bronkhorstspruit</span>
+        </div>
+      </div>
+
+      <div class="photo-strip-card">
+        <img src="nana_banana.jpg" alt="Fresh Nana Bananas Harvest">
+        <div class="photo-strip-label">
+          <span>Nana Banana Harvest</span>
+          <span>Tree Ripened 🍌</span>
+        </div>
+      </div>
+
+      <div class="photo-strip-card">
+        <img src="fresh_herbs.jpg" alt="Fresh Culinary Herbs Harvest">
+        <div class="photo-strip-label">
+          <span>Herb & Green Harvest</span>
+          <span>Pesticide-Free</span>
+        </div>
+      </div>
+
+      <div class="photo-strip-card">
+        <img src="seasonal_veg.jpg" alt="Seasonal Organic Produce Harvest Crate">
+        <div class="photo-strip-label">
+          <span>Fresh Harvest Crates</span>
+          <span>Delivered Weekly</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Connect Bar -->
+<div class="social-strip">
+  <span class="social-strip-label">Direct Farm Contacts:</span>
+  <a href="https://wa.me/27846494802?text=Hi%20Vidaboa%20Farm%2C%20I%20would%20like%20to%20order" target="_blank" rel="noopener" class="soc-btn soc-wa">💬 WhatsApp: +27 84 649 4802</a>
+  <a href="https://www.instagram.com/vidaboafarm" target="_blank" rel="noopener" class="soc-btn soc-ig">📷 @vidaboafarm</a>
+  <a href="https://www.facebook.com/vidaboafarm" target="_blank" rel="noopener" class="soc-btn soc-fb">Facebook: Vidaboa Farm</a>
+  <a href="mailto:vidaboafarm@gmail.com" class="soc-btn soc-em">✉ vidaboafarm@gmail.com</a>
+</div>
+
+<!-- ================= ABOUT STORY SECTION ================= -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-eyebrow">Our Story & Heritage</p>
+        <h2 class="section-h">A Family Farm Built With Purpose</h2>
+        <p>Vidaboa Farm is an active family-run organic farm in Bronkhorstspruit, Gauteng. The Portuguese name <strong>"Vida Boa"</strong> means <em>"Good Life"</em> — reflecting our deep conviction that every South African family deserves access to real, wholesome, nutrient-dense food grown with care.</p>
+        <p>Across our 29 hectares, we nurture <strong>free-range broiler chickens, heritage runner hens, companion vegetable beds, fresh culinary herbs, and a growing goat herd</strong>. No synthetic sprays, no growth hormones, no shortcuts.</p>
+        
+        <div class="history-callout">
+          <strong>Regenerative Cycle</strong>
+          <p>“Our animals enrich the soil with natural compost, the soil produces lush organic greens, and the cycle feeds our community with dignity.”</p>
+        </div>
+      </div>
+
+      <div class="about-visual">
+        <div class="about-photo-card">
+          <img src="about_farm_story.jpg" alt="Vidaboa Farm Raised Beds and Greenery">
+        </div>
+        <div class="about-badge-float">
+          <span>2020</span>
+          Est.<br>Highveld
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TIMELINE SECTION ================= -->
+<section class="history">
+  <div class="container">
+    <div class="history-grid">
+      <div class="history-intro">
+        <p class="section-eyebrow">Our Journey</p>
+        <h2 class="section-h">Growing Season by Season</h2>
+        <p>Every harvest begins with patience. In 2020, our family acquired 29 hectares of Highveld land with a mission: to create a self-sustaining farm that provides clean nourishment and builds long-term community food security.</p>
+        <p>Through hard work, companion planting, and organic soil building, Vidaboa Farm has expanded from trial beds to supplying families, spaza shops, and markets across Gauteng and Mpumalanga.</p>
+        <a href="#order" class="btn btn-primary" style="margin-top:20px;">🛒 Order Fresh Produce</a>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <span class="tl-year">2020</span>
+          <h4>Acquisition of 29 Hectares</h4>
+          <p>Acquired the Highveld property in Bronkhorstspruit. Initial land regeneration, water infrastructure, and soil mapping begun.</p>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <span class="tl-year">2021</span>
+          <h4>Broilers & First Tomato Harvest</h4>
+          <p>Trialling free-range broiler batches. Tomato crops thrived in animal-compost enriched soil, validating our organic methodology.</p>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <span class="tl-year">2022</span>
+          <h4>Mixed Goat Herd Introduced</h4>
+          <p>Introduced goats for rotational grazing and continuous organic compost production, further regenerating pasture quality.</p>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <span class="tl-year">2023 - 2024</span>
+          <h4>Permanent Infrastructure & Expansion</h4>
+          <p>Invested in predator-proof housing, irrigation, raised beds, and dedicated packing facilities.</p>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <span class="tl-year">2025 & Beyond</span>
+          <h4>Direct Community Delivery</h4>
+          <p>Direct delivery routes launched for Pretoria, Johannesburg, Bronkhorstspruit, and Witbank.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DELIVERY REGIONS ================= -->
+<section class="delivery" id="delivery">
+  <div class="container">
+    <p class="section-eyebrow light">Direct Farm Routes</p>
+    <h2 class="section-h light">Delivering Fresh to Your Area</h2>
+
+    <div class="delivery-grid">
+      <div class="delivery-card">
+        <span class="delivery-card-icon">🏙️</span>
+        <h3>Pretoria</h3>
+        <p>Scheduled weekly delivery runs across Pretoria East, Centurion & suburbs. Pre-orders welcome.</p>
+      </div>
+
+      <div class="delivery-card">
+        <span class="delivery-card-icon">🌆</span>
+        <h3>Johannesburg</h3>
+        <p>Direct routes to Sandton, Midrand, Joburg North & surrounding neighborhoods.</p>
+      </div>
+
+      <div class="delivery-card">
+        <span class="delivery-card-icon">🌾</span>
+        <h3>Bronkhorstspruit</h3>
+        <p>Direct local delivery and on-farm collection. Fastest turnaround for local families & vendors.</p>
+      </div>
+
+      <div class="delivery-card">
+        <span class="delivery-card-icon">⛏️</span>
+        <h3>Witbank (eMalahleni)</h3>
+        <p>Bulk orders & scheduled runs for households, restaurants, and market traders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCTS SECTION WITH REAL HIGH-RES PHOTOS ================= -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="products-header">
+      <div>
+        <p class="section-eyebrow">Direct From The Soil</p>
+        <h2 class="section-h">Our Organic Farm Harvest</h2>
+      </div>
+      <a href="#order" class="btn btn-primary">🛒 Custom Order</a>
+    </div>
+
+    <div class="products-grid">
+      <!-- 1. Broiler Chickens -->
+      <div class="product-card featured">
+        <div class="product-featured-ribbon">Most Popular</div>
+        <div class="product-img-wrap">
+          <img src="broiler_chickens.jpg" alt="Free-Range Broiler Chickens on Green Pasture">
+        </div>
+        <div class="product-body">
+          <h3>Free-Range Broilers</h3>
+          <p>Raised with wide roaming space, sunshine, clean borehole water, and quality grains. Available live weight or freshly dressed.</p>
+          <div class="product-tags">
+            <span class="product-tag">Live Weight</span>
+            <span class="product-tag">Dressed</span>
+            <span class="product-tag">Bulk Batches</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-est">R40 – R120 / bird</span>
+            <a href="#order" class="product-link">Order Broilers →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Swiss Chard -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="swiss_chard.jpg" alt="Organic Swiss Chard Leafy Greens">
+        </div>
+        <div class="product-body">
+          <h3>Organic Swiss Chard</h3>
+          <p>Crisp, dark green, nutrient-rich leaves harvested same-day from companion-planted organic beds. Zero synthetic fertilizers.</p>
+          <div class="product-tags">
+            <span class="product-tag">Weekly Harvest</span>
+            <span class="product-tag">Chemical-Free</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-est">R15 – R25 / bunch</span>
+            <a href="#order" class="product-link">Order Chard →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Fresh Herbs -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="fresh_herbs.jpg" alt="Fresh Organic Culinary Herbs">
+        </div>
+        <div class="product-body">
+          <h3>Culinary Herbs & Greens</h3>
+          <p>Fragrant sweet basil, Italian flat parsley, chives, rosemary, and seasonal salad greens. Perfect for home cooks and food businesses.</p>
+          <div class="product-tags">
+            <span class="product-tag">Aromatic Bundles</span>
+            <span class="product-tag">Freshly Cut</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-est">R10 – R25 / bunch</span>
+            <a href="#order" class="product-link">Order Herbs →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Runner Chickens -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="runner_chickens.jpg" alt="Heritage Free-Range Runner Chickens">
+        </div>
+        <div class="product-body">
+          <h3>Heritage Runner Chickens</h3>
+          <p>Traditional self-foraging hardy birds sold as off-lay meat hens. Famous for their rich, deep flavor in slow-cooked traditional stews.</p>
+          <div class="product-tags">
+            <span class="product-tag">Heritage Breed</span>
+            <span class="product-tag">Traditional Flavour</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-est">R60 – R150 / bird</span>
+            <a href="#order" class="product-link">Enquire Birds →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Goats -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="farm_goats.jpg" alt="Goats Grazing on Farm Pasture">
+        </div>
+        <div class="product-body">
+          <h3>Healthy Goats Herd</h3>
+          <p>Natural veld-grazed herd. Young weaners and slaughter-weight goats available for ceremonies, family feasts, and breeding.</p>
+          <div class="product-tags">
+            <span class="product-tag">Weaner Kids</span>
+            <span class="product-tag">Slaughter Weight</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-est">Price on Request</span>
+            <a href="#order" class="product-link">Book a Goat →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Seasonal Vegetables -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="seasonal_veg.jpg" alt="Crate of Organic Seasonal Farm Vegetables">
+        </div>
+        <div class="product-body">
+          <h3>Seasonal Veg Crate</h3>
+          <p>Sun-ripened tomatoes, broccoli, green beans, beetroot, and seasonal squash picked fresh from our compost-fed garden beds.</p>
+          <div class="product-tags">
+            <span class="product-tag">Seasonal Crate</span>
+            <span class="product-tag">Compost Fed</span>
+          </div>
+          <div class="product-card-footer">
+            <span class="product-price-est">R30 – R60 / bundle</span>
+            <a href="#order" class="product-link">Check Availability →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SPECIAL OFFERS WITH PHOTO BACKDROPS ================= -->
+<section class="promos" id="promos">
+  <div class="container">
+    <p class="section-eyebrow light">Direct Farm Value</p>
+    <h2 class="section-h light">Current Farm Deals & Bundles</h2>
+
+    <div class="promos-grid">
+      <div class="promo-card promo-card-wide">
+        <img src="broiler_chickens.jpg" alt="Broiler Pre-order Background" class="promo-bg-img">
+        <div class="promo-card-inner">
+          <div>
+            <span class="promo-badge">Limited Batch Cycle</span>
+            <h3>Pre-Order Your Free-Range Broilers</h3>
+            <p>Our broiler batches sell out fast every cycle. Lock in your live or dressed chicken early to secure your farm-fresh poultry at wholesale direct rates.</p>
+          </div>
+          <a href="#order" class="promo-cta">Reserve Your Batch →</a>
+        </div>
+      </div>
+
+      <div class="promo-card">
+        <img src="swiss_chard.jpg" alt="Swiss Chard Subscription Background" class="promo-bg-img">
+        <div class="promo-card-inner">
+          <div>
+            <span class="promo-badge">Weekly Subscription</span>
+            <h3>Weekly Green Basket</h3>
+            <p>Fresh Swiss chard, fragrant herbs, and seasonal salad greens delivered weekly to your doorstep.</p>
+          </div>
+          <a href="#order" class="promo-cta">Setup Subscription →</a>
+        </div>
+      </div>
+
+      <div class="promo-card">
+        <img src="farm_delivery.jpg" alt="Wholesale Supply Background" class="promo-bg-img">
+        <div class="promo-card-inner">
+          <div>
+            <span class="promo-badge">Wholesale & Spaza</span>
+            <h3>Market & Spaza Supplier</h3>
+            <p>Special wholesale rates on chickens and fresh greens for street markets, tuckshops, and caterers.</p>
+          </div>
+          <a href="https://wa.me/27846494802?text=Hi%20Vidaboa%20Farm%2C%20I%20am%20interested%20in%20wholesale%20rates" target="_blank" rel="noopener" class="promo-cta">WhatsApp Wholesale →</a>
+        </div>
+      </div>
+
+      <div class="promo-card promo-card-wide">
+        <img src="farm_community.jpg" alt="Community Farm Share Background" class="promo-bg-img">
+        <div class="promo-card-inner">
+          <div>
+            <span class="promo-badge">Community Support</span>
+            <h3>Know Where Your Food Comes From</h3>
+            <p>When you buy from Vidaboa Farm, you directly support regenerative agriculture, ethical animal care, and healthy soil right here in South Africa.</p>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="https://www.instagram.com/vidaboafarm" target="_blank" rel="noopener" class="promo-cta">Follow Instagram</a>
+            <a href="https://www.facebook.com/vidaboafarm" target="_blank" rel="noopener" class="promo-cta">Follow Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ORDER SECTION ================= -->
+<section class="order-section" id="order">
+  <div class="container">
+    <p class="section-eyebrow">Direct Booking</p>
+    <h2 class="section-h">Order Directly From The Farm</h2>
+
+    <div class="order-grid">
+      <div class="order-info">
+        <p>Select your required produce below. When you click <strong>"Send Order via WhatsApp"</strong>, your complete order breakdown will open instantly in WhatsApp addressed to <strong>+27 84 649 4802</strong> for immediate confirmation.</p>
+
+        <div class="order-trust-card">
+          <img src="farm_delivery.jpg" alt="Fresh Farm Delivery Crates">
+          <div>
+            <h4>Fresh Harvest Guarantee</h4>
+            <p>We harvest our greens and prepare poultry on the day of delivery to guarantee maximum freshness.</p>
+          </div>
+        </div>
+
+        <div class="contact-links">
+          <a href="https://wa.me/27846494802?text=Hi%20Vidaboa%20Farm%2C%20I%20would%20like%20to%20place%20an%20order" target="_blank" rel="noopener" class="cl">
+            <div class="cl-icon" style="background:var(--wa);">💬</div>
+            <div class="cl-text">
+              <strong>WhatsApp: +27 84 649 4802</strong>
+              Fastest response for immediate queries & orders
+            </div>
+          </a>
+
+          <a href="mailto:vidaboafarm@gmail.com" class="cl">
+            <div class="cl-icon" style="background:var(--rust);">✉</div>
+            <div class="cl-text">
+              <strong>vidaboafarm@gmail.com</strong>
+              Official farm email address
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/vidaboafarm" target="_blank" rel="noopener" class="cl">
+            <div class="cl-icon" style="background:var(--ig);">📷</div>
+            <div class="cl-text">
+              <strong>Instagram: @vidaboafarm</strong>
+              Live harvest stories & updates
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Order Calculator Form -->
+      <div class="order-form-card">
+        <h3>🛒 Create Your Order</h3>
+
+        <div class="fg-row">
+          <div class="fg">
+            <label for="fname">Your Full Name</label>
+            <input type="text" id="fname" placeholder="e.g. Sipho Ndlovu">
+          </div>
+          <div class="fg">
+            <label for="fphone">WhatsApp Number</label>
+            <input type="tel" id="fphone" placeholder="+27 84 ...">
+          </div>
+        </div>
+
+        <div class="fg">
+          <label for="farea">Delivery Region / Destination</label>
+          <select id="farea">
+            <option value="" disabled selected>Choose your delivery area</option>
+            <option value="Bronkhorstspruit">Bronkhorstspruit (Farm Collection or Local)</option>
+            <option value="Pretoria">Pretoria (East / North / Centurion)</option>
+            <option value="Johannesburg">Johannesburg (North / Sandton / Midrand)</option>
+            <option value="Witbank">Witbank (eMalahleni)</option>
+            <option value="Other">Other (Confirm via WhatsApp)</option>
+          </select>
+        </div>
+
+        <span class="qty-section-label">Select Items & Quantities</span>
+
+        <div>
+          <div class="qty-row">
+            <div class="qty-label">
+              Free-Range Broilers
+              <span class="qty-sub">Live or dressed · R40 – R120 / bird</span>
+            </div>
+            <div class="qty-ctrl">
+              <button class="qty-btn" onclick="changeQty('broiler',-1)" aria-label="Decrease broilers">-</button>
+              <span class="qty-num" id="broiler-qty">0</span>
+              <button class="qty-btn" onclick="changeQty('broiler',1)" aria-label="Increase broilers">+</button>
+            </div>
+          </div>
+
+          <div class="qty-row">
+            <div class="qty-label">
+              Nana Banana (Crates) 🍌
+              <span class="qty-sub">Tree-ripened organic · R35 – R110 / crate</span>
+            </div>
+            <div class="qty-ctrl">
+              <button class="qty-btn" onclick="changeQty('banana',-1)" aria-label="Decrease banana">-</button>
+              <span class="qty-num" id="banana-qty">0</span>
+              <button class="qty-btn" onclick="changeQty('banana',1)" aria-label="Increase banana">+</button>
+            </div>
+          </div>
+
+          <div class="qty-row">
+            <div class="qty-label">
+              Swiss Chard Bunches
+              <span class="qty-sub">Freshly cut · R15 – R25 / bunch</span>
+            </div>
+            <div class="qty-ctrl">
+              <button class="qty-btn" onclick="changeQty('chard',-1)" aria-label="Decrease chard">-</button>
+              <span class="qty-num" id="chard-qty">0</span>
+              <button class="qty-btn" onclick="changeQty('chard',1)" aria-label="Increase chard">+</button>
+            </div>
+          </div>
+
+          <div class="qty-row">
+            <div class="qty-label">
+              Culinary Herb Bunches
+              <span class="qty-sub">Basil, parsley, chives · R10 – R25 / bunch</span>
+            </div>
+            <div class="qty-ctrl">
+              <button class="qty-btn" onclick="changeQty('herbs',-1)" aria-label="Decrease herbs">-</button>
+              <span class="qty-num" id="herbs-qty">0</span>
+              <button class="qty-btn" onclick="changeQty('herbs',1)" aria-label="Increase herbs">+</button>
+            </div>
+          </div>
+
+          <div class="qty-row">
+            <div class="qty-label">
+              Runner Chickens (off-lay)
+              <span class="qty-sub">Heritage meat hen · R60 – R150 / bird</span>
+            </div>
+            <div class="qty-ctrl">
+              <button class="qty-btn" onclick="changeQty('runner',-1)" aria-label="Decrease runner hens">-</button>
+              <span class="qty-num" id="runner-qty">0</span>
+              <button class="qty-btn" onclick="changeQty('runner',1)" aria-label="Increase runner hens">+</button>
+            </div>
+          </div>
+
+          <div class="qty-row">
+            <div class="qty-label">
+              Seasonal Veg Crate Bundle
+              <span class="qty-sub">Tomatoes, beans, broccoli · R30 – R60</span>
+            </div>
+            <div class="qty-ctrl">
+              <button class="qty-btn" onclick="changeQty('veg',-1)" aria-label="Decrease veg bundle">-</button>
+              <span class="qty-num" id="veg-qty">0</span>
+              <button class="qty-btn" onclick="changeQty('veg',1)" aria-label="Increase veg bundle">+</button>
+            </div>
+          </div>
+
+          <div class="qty-row">
+            <div class="qty-label">
+              Goat Booking Enquiry
+              <span class="qty-sub">Weaner or slaughter weight</span>
+            </div>
+            <div class="qty-ctrl">
+              <button class="qty-btn" onclick="changeQty('goat',-1)" aria-label="Decrease goat enquiry">-</button>
+              <span class="qty-num" id="goat-qty">0</span>
+              <button class="qty-btn" onclick="changeQty('goat',1)" aria-label="Increase goat enquiry">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-summary">
+          <span class="order-summary-label">Selected Produce Total:</span>
+          <span class="order-summary-val" id="total-items">0 items</span>
+        </div>
+
+        <div class="fg">
+          <label for="fnotes">Special Instructions or Preparation Notes</label>
+          <textarea id="fnotes" placeholder="e.g., Live or dressed poultry, preferred delivery day, specific cuts..."></textarea>
+        </div>
+
+        <button class="submit-btn" style="background:linear-gradient(135deg, #25d366 0%, #1eab52 100%);box-shadow:0 6px 20px rgba(37,211,102,0.4);" onclick="placeOrder()">💬 Send Order via WhatsApp</button>
+        <p class="form-note">Your order will open directly in WhatsApp to +27 84 649 4802 for fast same-day confirmation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALUES & SUSTAINABILITY WITH REAL IMAGES ================= -->
+<section class="values">
+  <div class="container">
+    <p class="section-eyebrow light">Regenerative Farming</p>
+    <h2 class="section-h light">Our Farming Philosophy</h2>
+
+    <div class="values-row">
+      <div class="val-card">
+        <img src="farm_soil_sustainability.jpg" alt="Regenerative Soil Stewardship" class="val-img">
+        <h3>Living Soil</h3>
+        <p>We enrich our 29 hectares using rotational livestock grazing, natural cover crops, and rich compost.</p>
+      </div>
+
+      <div class="val-card">
+        <img src="farm_community.jpg" alt="Community First Agriculture" class="val-img">
+        <h3>Community First</h3>
+        <p>Direct farm-to-table sales for households, spaza shops, and markets with zero middleman markups.</p>
+      </div>
+
+      <div class="val-card">
+        <img src="swiss_chard.jpg" alt="Organic Farming Always" class="val-img">
+        <h3>100% Organic</h3>
+        <p>Zero synthetic chemicals or sprays on our vegetables, and humane free-range space for every animal.</p>
+      </div>
+
+      <div class="val-card">
+        <img src="farm_goats.jpg" alt="Circular Zero Waste Agriculture" class="val-img">
+        <h3>Zero Waste</h3>
+        <p>Goat and chicken manure fertilizes our vegetable beds, and leftover crop greens nourish the livestock.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand">
+        <img src="vidaboa_logo.svg" alt="Vidaboa Farm Logo" class="footer-logo-img" width="95" height="95">
+        <div class="footer-title">VIDA<em>BOA</em> FARM</div>
+      </div>
+      <p class="footer-tagline">A 29-hectare organic family farm in Bronkhorstspruit, Gauteng, committed to providing wholesome, chemical-free food for our people since 2020.</p>
+      <div class="footer-socials">
+        <a href="https://wa.me/27846494802" target="_blank" rel="noopener" class="fsoc" style="background:var(--wa);color:#fff;" title="WhatsApp">💬</a>
+        <a href="https://www.instagram.com/vidaboafarm" target="_blank" rel="noopener" class="fsoc" style="background:var(--ig);color:#fff;" title="Instagram">📷</a>
+        <a href="https://www.facebook.com/vidaboafarm" target="_blank" rel="noopener" class="fsoc" style="background:var(--fb);color:#fff;" title="Facebook">f</a>
+        <a href="mailto:vidaboafarm@gmail.com" class="fsoc" style="background:var(--rust);color:#fff;" title="Email">✉</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Our Harvest</h4>
+      <ul>
+        <li><a href="#products">Free-Range Broilers</a></li>
+        <li><a href="#products">Organic Swiss Chard</a></li>
+        <li><a href="#products">Fresh Herb Bundles</a></li>
+        <li><a href="#products">Runner Meat Hens</a></li>
+        <li><a href="#products">Goat Herd</a></li>
+        <li><a href="#products">Seasonal Vegetables</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Delivery Areas</h4>
+      <ul>
+        <li><a href="#delivery">Pretoria</a></li>
+        <li><a href="#delivery">Johannesburg</a></li>
+        <li><a href="#delivery">Bronkhorstspruit</a></li>
+        <li><a href="#delivery">Witbank (eMalahleni)</a></li>
+        <li><a href="#delivery">Farm Collection</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Direct Contact</h4>
+      <ul>
+        <li><a href="https://wa.me/27846494802" target="_blank" rel="noopener">WhatsApp: +27 84 649 4802</a></li>
+        <li><a href="mailto:vidaboafarm@gmail.com">vidaboafarm@gmail.com</a></li>
+        <li><a href="https://www.instagram.com/vidaboafarm" target="_blank" rel="noopener">Instagram: @vidaboafarm</a></li>
+        <li><a href="https://www.facebook.com/vidaboafarm" target="_blank" rel="noopener">Facebook: Vidaboa Farm</a></li>
+        <li><a href="#order">Place an Order</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+  <div class="footer-bottom">
+    <span>© 2026 Vidaboa Farm. All rights reserved. Bronkhorstspruit, Gauteng, South Africa.</span>
+    <span>Pure Organic · Free-Range Pasture · Highveld Harvest</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="alert">Your order email is ready! We will follow up via WhatsApp within 24 hours.</div>
+
+<script>
+const quantities = {
+  broiler: 0,
+  banana: 0,
+  chard: 0,
+  herbs: 0,
+  runner: 0,
+  veg: 0,
+  goat: 0
+};
+
+const labels = {
+  broiler: 'Free-Range Broiler Chickens',
+  banana: 'Nana Banana Crates 🍌',
+  chard: 'Organic Swiss Chard Bunches',
+  herbs: 'Fresh Culinary Herb Bunches',
+  runner: 'Heritage Runner Meat Hens',
+  veg: 'Seasonal Veg Crate Bundles',
+  goat: 'Goat Herd Booking'
+};
+
+function changeQty(item, delta) {
+  quantities[item] = Math.max(0, quantities[item] + delta);
+  document.getElementById(item + '-qty').textContent = quantities[item];
+  updateTotal();
+}
+
+function updateTotal() {
+  const total = Object.values(quantities).reduce((a, b) => a + b, 0);
+  document.getElementById('total-items').textContent = total + (total === 1 ? ' item' : ' items');
+}
+
+function placeOrder() {
+  const name = document.getElementById('fname').value.trim();
+  const phone = document.getElementById('fphone').value.trim();
+  const area = document.getElementById('farea').value;
+  const notes = document.getElementById('fnotes').value.trim();
+
+  if (!name || !phone || !area) {
+    alert('Please provide your Name, WhatsApp Phone Number, and Delivery Area.');
+    return;
+  }
+
+  const total = Object.values(quantities).reduce((a, b) => a + b, 0);
+  if (total === 0) {
+    alert('Please select at least 1 product quantity before placing your order.');
+    return;
+  }
+
+  let itemsList = '';
+  for (const [k, q] of Object.entries(quantities)) {
+    if (q > 0) {
+      itemsList += `• ${labels[k]}: ${q}\n`;
+    }
+  }
+
+  const message = 
+    `🌿 *NEW ORDER - VIDABOA FARM*\n` +
+    `--------------------------------\n` +
+    `👤 *Customer Name:* ${name}\n` +
+    `📱 *WhatsApp Number:* ${phone}\n` +
+    `📍 *Delivery Area:* ${area}\n\n` +
+    `🛒 *ITEMS ORDERED (${total} total):*\n${itemsList}\n` +
+    `📝 *Special Notes / Cuts:* ${notes || 'None'}\n` +
+    `--------------------------------\n` +
+    `Please confirm total and delivery schedule. Thank you!`;
+
+  const waUrl = `https://wa.me/27846494802?text=${encodeURIComponent(message)}`;
+  window.open(waUrl, '_blank');
+
+  const toast = document.getElementById('toast');
+  toast.textContent = 'Opening WhatsApp to send your order...';
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 6000);
+}
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+</script>
+
+<!-- Floating WhatsApp Action Button with Authentic WhatsApp SVG Icon -->
+<a href="https://wa.me/27846494802?text=Hi%20Vidaboa%20Farm%2C%20I%20would%20like%20to%20place%20an%20order" target="_blank" rel="noopener" class="floating-wa-btn" aria-label="Chat on WhatsApp">
+  <span class="floating-wa-icon">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </span>
+  <span class="floating-wa-text">Chat on WhatsApp</span>
+</a>
+
+</body>
+</html>
